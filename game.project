@@ -1,0 +1,31 @@
+[bootstrap]
+main_collection = /demo/main.collectionc
+
+[script]
+shared_state = 1
+
+[display]
+width = 640
+height = 960
+vsync = 0
+
+[android]
+input_method = HiddenInputField
+
+[project]
+title = sharp_sprite
+version = 0.1.0
+publisher = Indiesoft LLC
+
+[library]
+include_dirs = sharp_sprite
+
+[input]
+game_binding = /demo/input/game.input_bindingc
+
+[render]
+clear_color_alpha = 1.0
+clear_color_red = 0.1
+clear_color_green = 0.1
+clear_color_blue = 0.1
+
