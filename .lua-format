@@ -1,0 +1,3 @@
+column_limit: 120
+keep_simple_control_block_one_line: false
+keep_simple_function_one_line: false

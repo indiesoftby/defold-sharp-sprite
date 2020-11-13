@@ -8,3 +8,5 @@ Thumbs.db
 .project
 .cproject
 builtins
+/.vscode
+/editor-script-lua-format
