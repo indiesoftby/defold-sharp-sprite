@@ -1,6 +1,11 @@
+local app_window = require("demo.app.window")
+
 function init(self)
 	msg.post("@render:", "use_fixed_fit_projection", { near = -1, far = 1 })
 	msg.post(".", "acquire_input_focus")
+
+	app_window.resize()
+	app_window.center()
 end
 
 function final(self)

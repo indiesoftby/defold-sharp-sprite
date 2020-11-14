@@ -22,7 +22,7 @@ embedded_instances {
   "  type: \"sprite\"\n"
   "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
   "default_animation: \\\"large_character\\\"\\n"
-  "material: \\\"/sharp_sprite/materials/sharp_sprite.material\\\"\\n"
+  "material: \\\"/sharp_sprite/materials/sprite.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
   "  position {\n"
@@ -85,7 +85,7 @@ embedded_instances {
   "  type: \"sprite\"\n"
   "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
   "default_animation: \\\"small_logo\\\"\\n"
-  "material: \\\"/sharp_sprite/materials/sharp_sprite.material\\\"\\n"
+  "material: \\\"/sharp_sprite/materials/sprite.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
   "  position {\n"
@@ -165,7 +165,7 @@ embedded_instances {
   "  type: \"sprite\"\n"
   "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
   "default_animation: \\\"small_logo\\\"\\n"
-  "material: \\\"/demo/materials/sprite_mipmapped.material\\\"\\n"
+  "material: \\\"/demo/materials/sprite_mipmap_on.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
   "  position {\n"
@@ -255,7 +255,7 @@ embedded_instances {
   "  type: \"sprite\"\n"
   "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
   "default_animation: \\\"large_character\\\"\\n"
-  "material: \\\"/demo/materials/sprite.material\\\"\\n"
+  "material: \\\"/demo/materials/sprite_mipmap_off.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
   "  position {\n"
@@ -310,7 +310,7 @@ embedded_instances {
   "  type: \"sprite\"\n"
   "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
   "default_animation: \\\"large_character\\\"\\n"
-  "material: \\\"/demo/materials/sprite_mipmapped.material\\\"\\n"
+  "material: \\\"/demo/materials/sprite_mipmap_on.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
   "  position {\n"
@@ -350,7 +350,7 @@ embedded_instances {
   "  type: \"sprite\"\n"
   "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
   "default_animation: \\\"large_character\\\"\\n"
-  "material: \\\"/sharp_sprite/materials/sharp_sprite.material\\\"\\n"
+  "material: \\\"/sharp_sprite/materials/sprite.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
   "  position {\n"
@@ -390,7 +390,7 @@ embedded_instances {
   "  type: \"sprite\"\n"
   "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
   "default_animation: \\\"large_character\\\"\\n"
-  "material: \\\"/demo/materials/sprite.material\\\"\\n"
+  "material: \\\"/demo/materials/sprite_mipmap_off.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
   "  position {\n"
@@ -430,7 +430,7 @@ embedded_instances {
   "  type: \"sprite\"\n"
   "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
   "default_animation: \\\"large_character\\\"\\n"
-  "material: \\\"/demo/materials/sprite_mipmapped.material\\\"\\n"
+  "material: \\\"/demo/materials/sprite_mipmap_on.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
   "  position {\n"
@@ -461,5 +461,40 @@ embedded_instances {
     x: 0.2
     y: 0.2
     z: 0.2
+  }
+}
+embedded_instances {
+  id: "main"
+  data: "components {\n"
+  "  id: \"script\"\n"
+  "  component: \"/demo/main.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
   }
 }
