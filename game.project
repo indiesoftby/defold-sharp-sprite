@@ -5,9 +5,10 @@ main_collection = /demo/main.collectionc
 shared_state = 1
 
 [display]
-width = 640
-height = 960
+width = 1500
+height = 2000
 vsync = 0
+high_dpi = 1
 
 [android]
 input_method = HiddenInputField
@@ -29,4 +30,8 @@ clear_color_alpha = 1.0
 clear_color_red = 0.1
 clear_color_green = 0.1
 clear_color_blue = 0.1
+
+[html5]
+scale_mode = fit
+cssfile = /builtins/manifests/web/dark_theme.css
 
