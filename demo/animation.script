@@ -1,4 +1,0 @@
-function init(self)
-	go.animate(".", "scale", go.PLAYBACK_LOOP_PINGPONG, 0.2, go.EASING_LINEAR, 15)
-	go.animate(".", "euler.z", go.PLAYBACK_LOOP_PINGPONG, 45, go.EASING_LINEAR, 15)
-end

@@ -1,18 +1,60 @@
 local app_window = require("demo.app.window")
 
+local sprites = { 
+    "/sharp_sprite1#sprite_rgss",
+    "/sharp_sprite2#sprite_rgss",
+    "/sharp_sprite1_straight#sprite_rgss",
+    "/sharp_sprite2_straight#sprite_rgss",
+    "/sharp_sprite1#sprite_mipmap_off",
+    "/sharp_sprite2#sprite_mipmap_on",
+    "/sharp_sprite1_straight#sprite_mipmap_off",
+    "/sharp_sprite2_straight#sprite_mipmap_on"
+}
+
+local labels = { 
+    "/labels#label_rgss1",
+    "/labels#label_rgss2",
+    "/labels#label_rgss1",
+    "/labels#label_rgss2",
+    "/labels#label_mipmap_off",
+    "/labels#label_mipmap_on",
+    "/labels#label_mipmap_off",
+    "/labels#label_mipmap_on"
+}
+
+local function enable_sprite(self, nums)
+    for _, num in pairs(nums) do
+        msg.post(sprites[num], "enable")
+        msg.post(labels[num], "enable")
+    end
+end
+
+local function disable_sprite(self, nums)
+    for _, num in pairs(nums) do
+        msg.post(sprites[num], "disable")
+        msg.post(labels[num], "disable")
+    end
+end
+
 function init(self)
-	msg.post("@render:", "use_fixed_fit_projection", { near = -1, far = 1 })
-	msg.post(".", "acquire_input_focus")
+    msg.post("@render:", "use_fixed_fit_projection", { near = -1, far = 1 })
+    msg.post(".", "acquire_input_focus")
 
-	app_window.resize()
-	app_window.center()
+    app_window.resize()
+    app_window.center()
+
+    disable_sprite(self, { 1, 2, 3, 4 })
+    enable_sprite(self, { 5, 6, 7, 8 })
 end
 
-function final(self)
-end
-
-function update(self, dt)
-end
-
-function on_message(self, message_id, message, sender)
+function on_input(self, action_id, action)
+    if action_id == hash("touch") then
+        if action.pressed then
+            enable_sprite(self, { 1, 2, 3, 4 })
+            disable_sprite(self, { 5, 6, 7, 8 })
+        elseif action.released then
+            disable_sprite(self, { 1, 2, 3, 4 })
+            enable_sprite(self, { 5, 6, 7, 8 })
+        end
+    end
 end
