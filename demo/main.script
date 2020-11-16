@@ -5,10 +5,15 @@ local sprites = {
     "/sharp_sprite2#sprite_rgss",
     "/sharp_sprite1_straight#sprite_rgss",
     "/sharp_sprite2_straight#sprite_rgss",
+    "/sharp_sprite1_moving#sprite_rgss",
+    "/sharp_sprite2_moving#sprite_rgss",
+
     "/sharp_sprite1#sprite_mipmap_off",
     "/sharp_sprite2#sprite_mipmap_on",
     "/sharp_sprite1_straight#sprite_mipmap_off",
-    "/sharp_sprite2_straight#sprite_mipmap_on"
+    "/sharp_sprite2_straight#sprite_mipmap_on",
+    "/sharp_sprite1_moving#sprite_mipmap_off",
+    "/sharp_sprite2_moving#sprite_mipmap_on"
 }
 
 local labels = { 
@@ -16,6 +21,11 @@ local labels = {
     "/labels#label_rgss2",
     "/labels#label_rgss1",
     "/labels#label_rgss2",
+    "/labels#label_rgss1",
+    "/labels#label_rgss2",
+
+    "/labels#label_mipmap_off",
+    "/labels#label_mipmap_on",
     "/labels#label_mipmap_off",
     "/labels#label_mipmap_on",
     "/labels#label_mipmap_off",
@@ -43,18 +53,18 @@ function init(self)
     app_window.resize()
     app_window.center()
 
-    disable_sprite(self, { 1, 2, 3, 4 })
-    enable_sprite(self, { 5, 6, 7, 8 })
+    disable_sprite(self, { 1, 2, 3, 4, 5, 6 })
+    enable_sprite(self, { 7, 8, 9, 10, 11, 12 })
 end
 
 function on_input(self, action_id, action)
     if action_id == hash("touch") then
         if action.pressed then
-            enable_sprite(self, { 1, 2, 3, 4 })
-            disable_sprite(self, { 5, 6, 7, 8 })
+            enable_sprite(self, { 1, 2, 3, 4, 5, 6 })
+            disable_sprite(self, { 7, 8, 9, 10, 11, 12 })
         elseif action.released then
-            disable_sprite(self, { 1, 2, 3, 4 })
-            enable_sprite(self, { 5, 6, 7, 8 })
+            disable_sprite(self, { 1, 2, 3, 4, 5, 6 })
+            enable_sprite(self, { 7, 8, 9, 10, 11, 12 })
         end
     end
 end

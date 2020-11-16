@@ -45,7 +45,7 @@ embedded_instances {
   ""
   position {
     x: 375.0
-    y: 1247.0
+    y: 1338.0
     z: 0.0
   }
   rotation {
@@ -80,7 +80,7 @@ embedded_instances {
   ""
   position {
     x: 0.0
-    y: 0.0
+    y: 91.0
     z: 0.0
   }
   rotation {
@@ -370,7 +370,7 @@ embedded_instances {
   ""
   position {
     x: 375.0
-    y: 1569.0
+    y: 1660.0
     z: 0.0
   }
   rotation {
@@ -430,7 +430,7 @@ embedded_instances {
   ""
   position {
     x: 1125.0
-    y: 1247.0
+    y: 1338.0
     z: 0.0
   }
   rotation {
@@ -490,7 +490,7 @@ embedded_instances {
   ""
   position {
     x: 375.0
-    y: 738.0
+    y: 829.0
     z: 0.0
   }
   rotation {
@@ -500,9 +500,9 @@ embedded_instances {
     w: 1.0
   }
   scale3 {
-    x: 0.25
-    y: 0.25
-    z: 0.25
+    x: 0.2
+    y: 0.2
+    z: 0.2
   }
 }
 embedded_instances {
@@ -550,7 +550,7 @@ embedded_instances {
   ""
   position {
     x: 1125.0
-    y: 738.0
+    y: 829.0
     z: 0.0
   }
   rotation {
@@ -558,6 +558,156 @@ embedded_instances {
     y: 0.0
     z: 0.0
     w: 1.0
+  }
+  scale3 {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
+}
+embedded_instances {
+  id: "sharp_sprite1_moving"
+  data: "components {\n"
+  "  id: \"move\"\n"
+  "  component: \"/demo/move.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite_mipmap_off\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
+  "default_animation: \\\"demo_image\\\"\\n"
+  "material: \\\"/demo/materials/builtin_sprite_mipmap_off.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite_rgss\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
+  "default_animation: \\\"demo_image\\\"\\n"
+  "material: \\\"/sharp_sprite/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 375.0
+    y: 381.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.043619387
+    w: 0.99904823
+  }
+  scale3 {
+    x: 0.25
+    y: 0.25
+    z: 0.25
+  }
+}
+embedded_instances {
+  id: "sharp_sprite2_moving"
+  data: "components {\n"
+  "  id: \"move\"\n"
+  "  component: \"/demo/move.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite_mipmap_on\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
+  "default_animation: \\\"demo_image\\\"\\n"
+  "material: \\\"/demo/materials/builtin_sprite_mipmap_on.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite_rgss\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
+  "default_animation: \\\"demo_image\\\"\\n"
+  "material: \\\"/sharp_sprite/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 1125.0
+    y: 381.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.043619387
+    w: 0.99904823
   }
   scale3 {
     x: 0.25
