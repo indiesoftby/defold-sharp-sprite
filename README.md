@@ -20,11 +20,11 @@ Or point to the ZIP file of a [specific release](https://github.com/indiesoftby/
 
 Sharp Sprite contains materials that are drop-in replacement for the standard 2D materials:
 
-- `/builtins/materials/gui.material` → `/sprite_sprite/materials/gui.material`
-- `/builtins/materials/particlefx.material` → `/sprite_sprite/materials/particlefx.material`
-- `/builtins/materials/spine.material` → `/sprite_sprite/materials/spine.material`
-- `/builtins/materials/sprite.material` → `/sprite_sprite/materials/sprite.material`
-- `/builtins/materials/tile_map.material` → `/sprite_sprite/materials/tile_map.material`
+- `/builtins/materials/gui.material` → `/sharp_sprite/materials/gui.material`
+- `/builtins/materials/particlefx.material` → `/sharp_sprite/materials/particlefx.material`
+- `/builtins/materials/spine.material` → `/sharp_sprite/materials/spine.material`
+- `/builtins/materials/sprite.material` → `/sharp_sprite/materials/sprite.material`
+- `/builtins/materials/tile_map.material` → `/sharp_sprite/materials/tile_map.material`
 
 ## Pros And Cons
 
