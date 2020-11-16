@@ -6,7 +6,7 @@ Sharp Sprite is the implementation of *Rotated Grid Super-Sampling (RGSS)* for t
 
 ![RGSS vs Builtin](rgss_vs_builtin.gif)
 
-How does it work? RGSS samples the texture multiple times with an offset on each sample and average the results. For this, it uses a 4x MSAA rotated grid pattern, sometimes called 4 rooks.
+How does it work? RGSS samples the texture multiple times with an offset on each sample and averages the results. For this, it uses a 4x MSAA rotated grid pattern, sometimes called 4 rooks.
 
 Also, **[check out the demo](https://indiesoftby.github.io/defold-sharp-sprite/)**.
 
