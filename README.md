@@ -16,7 +16,7 @@ https://github.com/indiesoftby/defold-sharp-sprite/archive/master.zip
 
 Or point to the ZIP file of a [specific release](https://github.com/indiesoftby/defold-sharp-sprite/releases).
 
-Sharp Sprite contains materials that are drop-in replacement for the standard Defold 2D materials:
+Sharp Sprite contains materials that are drop-in replacement for the standard 2D materials:
 
 - `/builtins/materials/gui.material` → `/sprite_sprite/materials/gui.material`
 - `/builtins/materials/particlefx.material` → `/sprite_sprite/materials/particlefx.material`
@@ -26,7 +26,7 @@ Sharp Sprite contains materials that are drop-in replacement for the standard De
 
 ## Pros And Cons
 
-- RGSS requires the [OES_standard_derivatives](https://www.khronos.org/registry/OpenGL/extensions/OES/OES_standard_derivatives.txt) OpenGL extension to run. It's universally supported by WebGL 1.0, by most of OpenGL ES 2.0 devices ([Android stats](https://opengles.gpuinfo.org/listreports.php?extension=GL_OES_standard_derivatives) and by all [iOS devices](https://developer.apple.com/library/archive/documentation/OpenGLES/Conceptual/OpenGLESHardwarePlatformGuide_iOS/OpenGLESPlatforms/OpenGLESPlatforms.html)).
+- RGSS requires the [OES_standard_derivatives](https://www.khronos.org/registry/OpenGL/extensions/OES/OES_standard_derivatives.txt) OpenGL extension to run. It's universally supported by WebGL 1.0, by the most of OpenGL ES 2.0 devices ([Android stats](https://opengles.gpuinfo.org/listreports.php?extension=GL_OES_standard_derivatives) and by all [iOS devices](https://developer.apple.com/library/archive/documentation/OpenGLES/Conceptual/OpenGLESHardwarePlatformGuide_iOS/OpenGLESPlatforms/OpenGLESPlatforms.html)).
 - RGSS is sampling the texture 4 times. On mobile GPUs, it can have a significant performance impact. You should always check the game performance on your target devices!
 - Sharp Sprite's implementation of RGSS is blurring at 1:1 scaling.
 - Also, it doesn't use mipmapped textures. You can turn off the mipmapping in your texture profile and save 30% of disk space.
