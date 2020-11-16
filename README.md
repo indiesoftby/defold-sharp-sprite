@@ -36,3 +36,5 @@ Sharp Sprite contains materials that are drop-in replacement for the standard 2D
 ## Credits
 
 Based on an original idea by Ben Golus - **[Sharper Mipmapping using Shader Based Supersampling](https://medium.com/@bgolus/sharper-mipmapping-using-shader-based-supersampling-ed7aadb47bec)**.
+
+The snake image is from [Kenney](https://kenney.nl/).
