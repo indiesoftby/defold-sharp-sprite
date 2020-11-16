@@ -8,6 +8,8 @@ Sharp Sprite is the implementation of *Rotated Grid Super-Sampling (RGSS)* for t
 
 How does it work? RGSS samples the texture multiple times with an offset on each sample and average the results. For this, it uses a 4x MSAA rotated grid pattern, sometimes called 4 rooks.
 
+Also, **[check out the demo](https://indiesoftby.github.io/defold-sharp-sprite/)**.
+
 ## Installation
 
 You can use it in your own project by adding this project as a [Defold library dependency](http://www.defold.com/manuals/libraries/). Open your `game.project` file and in the dependencies field under project add:
