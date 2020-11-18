@@ -1,42 +1,45 @@
 # Defold Protocol Buffer Text Files (https://github.com/github/linguist/issues/5091)
-*.animationset linguist-language=JSON5
-*.atlas linguist-language=JSON5
-*.camera linguist-language=JSON5
-*.collection linguist-language=JSON5
-*.collectionfactory linguist-language=JSON5
-*.collectionproxy linguist-language=JSON5
-*.collisionobject linguist-language=JSON5
-*.cubemap linguist-language=JSON5
-*.display_profiles linguist-language=JSON5
-*.factory linguist-language=JSON5
-*.font linguist-language=JSON5
-*.gamepads linguist-language=JSON5
-*.go linguist-language=JSON5
-*.gui linguist-language=JSON5
-*.input_binding linguist-language=JSON5
-*.label linguist-language=JSON5
-*.material linguist-language=JSON5
-*.mesh linguist-language=JSON5
-*.model linguist-language=JSON5
-*.particlefx linguist-language=JSON5
-*.render linguist-language=JSON5
-*.sound linguist-language=JSON5
-*.sprite linguist-language=JSON5
-*.spinemodel linguist-language=JSON5
-*.spinescene linguist-language=JSON5
-*.texture_profiles linguist-language=JSON5
-*.tilemap linguist-language=JSON5
-*.tilesource linguist-language=JSON5
+*.animationset linguist-language=JSON5 gitlab-language=protobuf
+*.atlas linguist-language=JSON5 gitlab-language=protobuf
+*.camera linguist-language=JSON5 gitlab-language=protobuf
+*.collection linguist-language=JSON5 gitlab-language=protobuf
+*.collectionfactory linguist-language=JSON5 gitlab-language=protobuf
+*.collectionproxy linguist-language=JSON5 gitlab-language=protobuf
+*.collisionobject linguist-language=JSON5 gitlab-language=protobuf
+*.cubemap linguist-language=JSON5 gitlab-language=protobuf
+*.display_profiles linguist-language=JSON5 gitlab-language=protobuf
+*.factory linguist-language=JSON5 gitlab-language=protobuf
+*.font linguist-language=JSON5 gitlab-language=protobuf
+*.gamepads linguist-language=JSON5 gitlab-language=protobuf
+*.go linguist-language=JSON5 gitlab-language=protobuf
+*.gui linguist-language=JSON5 gitlab-language=protobuf
+*.input_binding linguist-language=JSON5 gitlab-language=protobuf
+*.label linguist-language=JSON5 gitlab-language=protobuf
+*.material linguist-language=JSON5 gitlab-language=protobuf
+*.mesh linguist-language=JSON5 gitlab-language=protobuf
+*.model linguist-language=JSON5 gitlab-language=protobuf
+*.particlefx linguist-language=JSON5 gitlab-language=protobuf
+*.render linguist-language=JSON5 gitlab-language=protobuf
+*.sound linguist-language=JSON5 gitlab-language=protobuf
+*.sprite linguist-language=JSON5 gitlab-language=protobuf
+*.spinemodel linguist-language=JSON5 gitlab-language=protobuf
+*.spinescene linguist-language=JSON5 gitlab-language=protobuf
+*.texture_profiles linguist-language=JSON5 gitlab-language=protobuf
+*.tilemap linguist-language=JSON5 gitlab-language=protobuf
+*.tilesource linguist-language=JSON5 gitlab-language=protobuf
 
 # Defold JSON Files
-*.buffer linguist-language=JSON
+*.buffer linguist-language=JSON gitlab-language=json
 
 # Defold GLSL Shaders
-*.fp linguist-language=GLSL
-*.vp linguist-language=GLSL
+*.fp linguist-language=GLSL gitlab-language=glsl
+*.vp linguist-language=GLSL gitlab-language=glsl
 
 # Defold Lua Files
-*.editor_script linguist-language=Lua
-*.render_script linguist-language=Lua
-*.script linguist-language=Lua
-*.gui_script linguist-language=Lua
+*.editor_script linguist-language=Lua gitlab-language=lua
+*.render_script linguist-language=Lua gitlab-language=lua
+*.script linguist-language=Lua gitlab-language=lua
+*.gui_script linguist-language=Lua gitlab-language=lua
+
+# Defold Project Settings
+*.project linguist-language=INI gitlab-language=ini
