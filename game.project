@@ -15,7 +15,7 @@ input_method = HiddenInputField
 
 [project]
 title = sharp_sprite
-version = 0.1.0
+version = 0.1.1
 publisher = Indiesoft LLC
 dependencies = https://github.com/subsoap/defos/archive/v2.4.2.zip
 
