@@ -37,7 +37,7 @@ Sharp Sprite contains materials that are drop-in replacement for the standard 2D
 - RGSS doesn't use mipmapped textures. You can turn off the mipmapping in your texture profile and save 30% of disk space.
 - If your sprites use both Defold standard and Sharp Sprite materials, then it's good idea to split them by tags to avoid breaking of draw batching:
    1. Copy Sharp Sprite material to your project and [apply tag `tile_rgss` into it.](tile_rgss_1.png)
-   2. [Modify your render script to display sprites with the tag.](tile_rgss_2.png)
+   2. [Modify your render script to draw the tagged sprites.](tile_rgss_2.png)
 
 ## Credits
 
