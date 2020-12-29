@@ -26,6 +26,9 @@ Sharp Sprite contains materials that are drop-in replacement for the standard 2D
 - `/builtins/materials/sprite.material` → `/sharp_sprite/materials/sprite.material`
 - `/builtins/materials/tile_map.material` → `/sharp_sprite/materials/tile_map.material`
 - `/builtins/fonts/font.material` → `/sharp_sprite/fonts/font.material` or `/sharp_sprite/fonts/font-singlelayer.material`
+- `/builtins/fonts/font-fnt.material` → `/sharp_sprite/fonts/font-fnt.material`
+- `/builtins/fonts/label.material` → `/sharp_sprite/fonts/label.material` or `/sharp_sprite/fonts/label-singlelayer.material`
+- `/builtins/fonts/label-fnt.material` → `/sharp_sprite/fonts/label-fnt.material`
 
 ## Cons
 
