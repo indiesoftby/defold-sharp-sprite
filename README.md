@@ -25,6 +25,7 @@ Sharp Sprite contains materials that are drop-in replacement for the standard 2D
 - `/builtins/materials/spine.material` → `/sharp_sprite/materials/spine.material`
 - `/builtins/materials/sprite.material` → `/sharp_sprite/materials/sprite.material`
 - `/builtins/materials/tile_map.material` → `/sharp_sprite/materials/tile_map.material`
+- `/builtins/fonts/font.material` → `/sharp_sprite/fonts/font.material` or `/sharp_sprite/fonts/font-singlelayer.material`
 
 ## Cons
 
@@ -35,7 +36,7 @@ Sharp Sprite contains materials that are drop-in replacement for the standard 2D
 ## Tips
 
 - RGSS doesn't use mipmapped textures. You can turn off the mipmapping in your texture profile and save 30% of disk space.
-- If your sprites use both Defold standard and Sharp Sprite materials, then it's good idea to split them by tags to avoid breaking of draw batching:
+- If your sprites use both Defold standard and Sharp Sprite materials, then it's a good idea to split them by tags to avoid breaking of draw batching:
    1. Copy Sharp Sprite material to your project and [apply tag `tile_rgss` into it.](tile_rgss_1.png)
    2. [Modify your render script to draw the tagged sprites.](tile_rgss_2.png)
 
