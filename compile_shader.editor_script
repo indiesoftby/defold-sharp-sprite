@@ -1,3 +1,7 @@
+-- Download and install Mali Offline Compiler Version 6.4 and Arm Mobile Studio from the links:
+-- https://developer.arm.com/tools-and-software/graphics-and-gaming/mali-offline-compiler/downloads
+-- https://developer.arm.com/tools-and-software/graphics-and-gaming/arm-mobile-studio/components/mali-offline-compiler
+
 local M = {}
 
 local function ends_with(str, ending)
@@ -8,7 +12,7 @@ function M.get_commands()
     return {
         -- Samsung Chromebook Plus
         {
-            label = "RB: Compile Fragment Shader - Chromebook",
+            label = "Compile Fragment Shader (Chromebook Plus - T860)",
             locations = {"Edit", "Assets"},
             query = {selection = {type = "resource", cardinality = "one"}},
             active = function(opts)
@@ -23,7 +27,7 @@ function M.get_commands()
                 }
             end
         }, {
-            label = "RB: Compile Vertex Shader - Chromebook",
+            label = "Compile Vertex Shader (Chromebook Plus - T860)",
             locations = {"Edit", "Assets"},
             query = {selection = {type = "resource", cardinality = "one"}},
             active = function(opts)
@@ -37,9 +41,11 @@ function M.get_commands()
                     {action = "shell", command = {"cmd", "/C", "malioc.exe", "--core", "Mali-T860", "--vertex", path}}
                 }
             end
-        }, -- Amazon Fire HD 8 Plus (2020)
+        },
+
+        -- Amazon Fire HD 8 Plus (2020)
         {
-            label = "RB: Compile Fragment Shader - Fire HD",
+            label = "Compile Fragment Shader (Fire HD - G52)",
             locations = {"Edit", "Assets"},
             query = {selection = {type = "resource", cardinality = "one"}},
             active = function(opts)
@@ -54,7 +60,7 @@ function M.get_commands()
                 }
             end
         }, {
-            label = "RB: Compile Vertex Shader - Fire HD",
+            label = "Compile Vertex Shader (Fire HD - G52)",
             locations = {"Edit", "Assets"},
             query = {selection = {type = "resource", cardinality = "one"}},
             active = function(opts)
@@ -66,6 +72,72 @@ function M.get_commands()
                 path = path:sub(2)
                 return {
                     {action = "shell", command = {"cmd", "/C", "malioc.exe", "--core", "Mali-G52", "--vertex", path}}
+                }
+            end
+        },
+
+        -- Samsung Galaxy J3 (2016) EU
+        {
+            label = "Compile Fragment Shader (Galaxy J3 - Mali-400)",
+            locations = {"Edit", "Assets"},
+            query = {selection = {type = "resource", cardinality = "one"}},
+            active = function(opts)
+                local path = editor.get(opts.selection, "path")
+                return ends_with(path, ".fp")
+            end,
+            run = function(opts)
+                local path = editor.get(opts.selection, "path")
+                path = path:sub(2)
+                return {
+                    {action = "shell", command = {"cmd", "/C", "malisc", "--core", "Mali-400", "--fragment", path}}
+                }
+            end
+        }, {
+            label = "Compile Vertex Shader (Galaxy J3 - Mali-400)",
+            locations = {"Edit", "Assets"},
+            query = {selection = {type = "resource", cardinality = "one"}},
+            active = function(opts)
+                local path = editor.get(opts.selection, "path")
+                return ends_with(path, ".vp")
+            end,
+            run = function(opts)
+                local path = editor.get(opts.selection, "path")
+                path = path:sub(2)
+                return {
+                    {action = "shell", command = {"cmd", "/C", "malisc", "--core", "Mali-400", "--vertex", path}}
+                }
+            end
+        },
+
+        -- Samsung Galaxy J3 (2016) USA
+        {
+            label = "Compile Fragment Shader (Galaxy J3 - T720)",
+            locations = {"Edit", "Assets"},
+            query = {selection = {type = "resource", cardinality = "one"}},
+            active = function(opts)
+                local path = editor.get(opts.selection, "path")
+                return ends_with(path, ".fp")
+            end,
+            run = function(opts)
+                local path = editor.get(opts.selection, "path")
+                path = path:sub(2)
+                return {
+                    {action = "shell", command = {"cmd", "/C", "malisc", "--core", "Mali-T720", "--fragment", path}}
+                }
+            end
+        }, {
+            label = "Compile Vertex Shader (Galaxy J3 - T720)",
+            locations = {"Edit", "Assets"},
+            query = {selection = {type = "resource", cardinality = "one"}},
+            active = function(opts)
+                local path = editor.get(opts.selection, "path")
+                return ends_with(path, ".vp")
+            end,
+            run = function(opts)
+                local path = editor.get(opts.selection, "path")
+                path = path:sub(2)
+                return {
+                    {action = "shell", command = {"cmd", "/C", "malisc", "--core", "Mali-T720", "--vertex", path}}
                 }
             end
         }
