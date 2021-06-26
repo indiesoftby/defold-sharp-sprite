@@ -6,6 +6,14 @@ images {
   image: "/demo/assets/demo_image_morgerion.png"
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
+images {
+  image: "/demo/assets/demo_image_copy.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/demo/assets/demo_image_copy_copy.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
 margin: 0
 extrude_borders: 0
 inner_padding: 4
