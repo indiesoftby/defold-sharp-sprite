@@ -1,5 +1,5 @@
 [bootstrap]
-main_collection = /demo/main.collectionc
+main_collection = /demo/test_morgerion/main.collectionc
 
 [script]
 shared_state = 1
@@ -17,7 +17,7 @@ input_method = HiddenInputField
 title = sharp_sprite
 version = 0.1.2
 publisher = Indiesoft LLC
-dependencies = https://github.com/subsoap/defos/archive/v2.4.2.zip
+dependencies#0 = https://github.com/subsoap/defos/archive/v2.4.2.zip
 
 [library]
 include_dirs = sharp_sprite
