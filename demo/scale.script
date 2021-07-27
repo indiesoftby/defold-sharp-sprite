@@ -1,0 +1,4 @@
+function init(self)
+    local scale = go.get_scale()
+    go.animate(".", "scale", go.PLAYBACK_LOOP_PINGPONG, scale / 3, go.EASING_INOUTSINE, 5)
+end
