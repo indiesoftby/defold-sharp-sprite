@@ -2,7 +2,7 @@
 
 # Sharp Sprite - RGSS for Defold
 
-Sharp Sprite is the implementation of *Rotated Grid Super-Sampling (RGSS)* for the [Defold](https://defold.com/) engine. If you use down-scaled high-resolution images in your game and you want to get rid of blurriness (because of mipmapping) or sharpness (because of disabled mipmapping), then RGSS is for you:
+Sharp Sprite is the implementation of *Rotated Grid Super-Sampling (RGSS)* for the [Defold](https://defold.com/) engine. If you use down-scaled high-resolution images in your game and you want to get rid of blurriness (because of mipmapping) or sharpness (because of disabled mipmapping), then RGSS is for you.
 
 ![RGSS vs Builtin](rgss_vs_builtin.gif)
 
@@ -18,17 +18,32 @@ https://github.com/indiesoftby/defold-sharp-sprite/archive/main.zip
 
 Or point to the ZIP file of a [specific release](https://github.com/indiesoftby/defold-sharp-sprite/releases).
 
-Sharp Sprite contains materials that are drop-in replacement for the standard 2D materials:
+Sharp Sprite has materials that are drop-in replacement for the standard 2D materials:
 
-- `/builtins/materials/gui.material` → `/sharp_sprite/materials/gui.material`
-- `/builtins/materials/particlefx.material` → `/sharp_sprite/materials/particlefx.material`
-- `/builtins/materials/spine.material` → `/sharp_sprite/materials/spine.material`
-- `/builtins/materials/sprite.material` → `/sharp_sprite/materials/sprite.material`
-- `/builtins/materials/tile_map.material` → `/sharp_sprite/materials/tile_map.material`
-- `/builtins/fonts/font.material` → `/sharp_sprite/fonts/font.material` or `/sharp_sprite/fonts/font-singlelayer.material`
-- `/builtins/fonts/font-fnt.material` → `/sharp_sprite/fonts/font-fnt.material`
-- `/builtins/fonts/label.material` → `/sharp_sprite/fonts/label.material` or `/sharp_sprite/fonts/label-singlelayer.material`
-- `/builtins/fonts/label-fnt.material` → `/sharp_sprite/fonts/label-fnt.material`
+| Type | Defold Material | Sharp Sprite Material |
+| ---- | --------------- | --------------------- |
+| **RGSS** | | |
+| GUI  | `/builtins/materials/gui.material` | `/sharp_sprite/rgss/materials/gui.material` |
+| ParticleFX  | `/builtins/materials/particlefx.material` | `/sharp_sprite/rgss/materials/particlefx.material` |
+| Spine  | `/builtins/materials/spine.material` | `/sharp_sprite/rgss/materials/spine.material` |
+| Sprite  | `/builtins/materials/sprite.material` | `/sharp_sprite/rgss/materials/sprite.material` |
+| Tilemap  | `/builtins/materials/tile_map.material` | `/sharp_sprite/rgss/materials/tile_map.material` |
+| Font (Bitmap)  | `/builtins/fonts/font.material` | `/sharp_sprite/rgss/fonts/font.material` or `/sharp_sprite/rgss/fonts/font-singlelayer.material` |
+| Font (BMFont)  | `/builtins/fonts/font-fnt.material` | `/sharp_sprite/rgss/fonts/font-fnt.material` |
+| Label (Bitmap)  | `/builtins/fonts/label.material` | `/sharp_sprite/rgss/fonts/label.material` or `/sharp_sprite/rgss/fonts/label-singlelayer.material` |
+| Label (BMFont)  | `/builtins/fonts/label-fnt.material` | `/sharp_sprite/rgss/fonts/label-fnt.material` |
+| **RGSS Mipmap Bias -1.0** | | |
+| GUI  | `/builtins/materials/gui.material` | `/sharp_sprite/rgss_bias/materials/gui.material` |
+| ParticleFX  | `/builtins/materials/particlefx.material` | `/sharp_sprite/rgss_bias/materials/particlefx.material` |
+| Spine  | `/builtins/materials/spine.material` | `/sharp_sprite/rgss_bias/materials/spine.material` |
+| Sprite  | `/builtins/materials/sprite.material` | `/sharp_sprite/rgss_bias/materials/sprite.material` |
+| Tilemap  | `/builtins/materials/tile_map.material` | `/sharp_sprite/rgss_bias/materials/tile_map.material` |
+| **Mipmap Bias -1.0** | | |
+| GUI  | `/builtins/materials/gui.material` | `/sharp_sprite/mipmap_bias/materials/gui.material` |
+| ParticleFX  | `/builtins/materials/particlefx.material` | `/sharp_sprite/mipmap_bias/materials/particlefx.material` |
+| Spine  | `/builtins/materials/spine.material` | `/sharp_sprite/mipmap_bias/materials/spine.material` |
+| Sprite  | `/builtins/materials/sprite.material` | `/sharp_sprite/mipmap_bias/materials/sprite.material` |
+| Tilemap  | `/builtins/materials/tile_map.material` | `/sharp_sprite/mipmap_bias/materials/tile_map.material` |
 
 ## Cons
 
