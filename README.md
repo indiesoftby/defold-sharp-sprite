@@ -8,7 +8,9 @@ Sharp Sprite is the implementation of *Rotated Grid Super-Sampling (RGSS)* for t
 
 How does it work? RGSS samples the texture multiple times with an offset on each sample and averages the results. For this, it uses a 4x MSAA rotated grid pattern, sometimes called 4 rooks.
 
-Also, **[check out the demo](https://indiesoftby.github.io/defold-sharp-sprite/)**.
+The second solution, that included in this repo, uses *mip biasing*. Mip biasing tells the GPU to adjust what mip level to use. The shaders use mip bias of -1.0 that pushes the mip level one full mip back to make 2D sprites look much sharper.
+
+Also, **[check out the demo](https://indiesoftby.github.io/defold-sharp-sprite/)**. Feel free to ask questions [in the Defold forum topic](https://forum.defold.com/t/sharp-sprite-rgss-for-defold/66840).
 
 ## Installation
 
@@ -19,6 +21,9 @@ https://github.com/indiesoftby/defold-sharp-sprite/archive/main.zip
 Or point to the ZIP file of a [specific release](https://github.com/indiesoftby/defold-sharp-sprite/releases).
 
 Sharp Sprite has materials that are drop-in replacement for the standard 2D materials:
+- **Mipmap Bias -1.0**: almost as fast as the standard materials. Use this first. If it fits your project well, keep it and don't try RGSS at all.
+- **RGSS**: slow, and requires OES_standard_derivatives (see below), and doesn't require mipmaps.
+- **RGSS Mipmap Bias -1.0**: a bit faster than RGSS, and requires mipmaps.
 
 | Type | Defold Material | Sharp Sprite Material |
 | ---- | --------------- | --------------------- |
@@ -45,14 +50,11 @@ Sharp Sprite has materials that are drop-in replacement for the standard 2D mate
 | Sprite  | `/builtins/materials/sprite.material` | `/sharp_sprite/mipmap_bias/materials/sprite.material` |
 | Tilemap  | `/builtins/materials/tile_map.material` | `/sharp_sprite/mipmap_bias/materials/tile_map.material` |
 
-## Cons
+## Notes
 
 - RGSS requires the [OES_standard_derivatives](https://www.khronos.org/registry/OpenGL/extensions/OES/OES_standard_derivatives.txt) OpenGL extension to run. It's universally supported by WebGL 1.0, by the most of OpenGL ES 2.0 devices ([Android stats](https://opengles.gpuinfo.org/listreports.php?extension=GL_OES_standard_derivatives) and by all [iOS devices](https://developer.apple.com/library/archive/documentation/OpenGLES/Conceptual/OpenGLESHardwarePlatformGuide_iOS/OpenGLESPlatforms/OpenGLESPlatforms.html)).
 - RGSS is sampling the texture 4 times. On mobile GPUs, it can have a significant performance impact. You should always check the game performance on your target devices!
-- Sharp Sprite's implementation of RGSS is blurring at 1:1 scaling.
-
-## Tips
-
+- RGSS is blurring at 1:1 scaling.
 - RGSS doesn't use mipmapped textures. You can turn off the mipmapping in your texture profile and save 30% of disk space.
 - If your sprites use both Defold standard and Sharp Sprite materials, then it's a good idea to split them by tags to avoid breaking of draw batching:
    1. Copy Sharp Sprite material to your project and [apply tag `tile_rgss` into it.](tile_rgss_1.png)
