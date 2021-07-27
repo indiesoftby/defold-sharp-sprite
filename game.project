@@ -15,7 +15,7 @@ input_method = HiddenInputField
 
 [project]
 title = sharp_sprite
-version = 0.1.2
+version = 0.2.0
 publisher = Indiesoft LLC
 dependencies#0 = https://github.com/subsoap/defos/archive/v2.5.0.zip
 dependencies#1 = https://github.com/britzl/defold-input/archive/refs/tags/4.1.4.zip
