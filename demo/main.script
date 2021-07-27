@@ -11,9 +11,9 @@ local sprites_objs = {
 local sprites_names = {
     "sprite_default",
     "sprite_mipmap_off",
-    "sprite_mipmap_biased",
+    "sprite_mipmap_bias",
     "sprite_rgss",
-    "sprite_rgss_biased"
+    "sprite_rgss_bias"
 }
 
 local function find_selected(self, group_num)

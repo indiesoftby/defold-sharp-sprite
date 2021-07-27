@@ -1,7 +1,7 @@
 name: "sprite"
 tags: "tile"
 vertex_program: "/builtins/materials/sprite.vp"
-fragment_program: "/sharp_sprite/mipmap_biased/materials/sprite.fp"
+fragment_program: "/sharp_sprite/rgss_bias/materials/sprite.fp"
 vertex_space: VERTEX_SPACE_WORLD
 vertex_constants {
   name: "view_proj"
