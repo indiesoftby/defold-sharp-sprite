@@ -4,7 +4,8 @@ local cursor = require "in.cursor"
 local sprites_objs = { 
     "/sprite1",
     "/sprite1_moving",
-    "/sprite1_straight"
+    "/sprite1_straight",
+    "/sprite1_rotation"
 }
 
 local sprites_names = {
