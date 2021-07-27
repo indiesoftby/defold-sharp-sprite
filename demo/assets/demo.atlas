@@ -20,4 +20,4 @@ images {
 }
 margin: 0
 extrude_borders: 0
-inner_padding: 4
+inner_padding: 8

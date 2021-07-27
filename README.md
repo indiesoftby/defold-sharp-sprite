@@ -14,19 +14,21 @@ Also, **[check out the demo](https://indiesoftby.github.io/defold-sharp-sprite/)
 
 ## Installation
 
-You can use it in your own project by adding this project as a [Defold library dependency](http://www.defold.com/manuals/libraries/). Open your `game.project` file and in the dependencies field under project add:
+You can use it in your own project by adding this project as a [Defold library dependency](http://www.defold.com/manuals/libraries/). Open your `game.project` file and in the dependencies field under project add the ZIP file of a [specific release](https://github.com/indiesoftby/defold-sharp-sprite/releases).
 
-https://github.com/indiesoftby/defold-sharp-sprite/archive/main.zip
-
-Or point to the ZIP file of a [specific release](https://github.com/indiesoftby/defold-sharp-sprite/releases).
-
-Sharp Sprite has materials that are drop-in replacement for the standard 2D materials:
+Sharp Sprite contains a collection of materials that are a drop-in replacement for the standard 2D materials:
 - **Mipmap Bias -1.0**: almost as fast as the standard materials. Use this first. If it fits your project well, keep it and don't try RGSS at all.
 - **RGSS**: slow, and requires OES_standard_derivatives (see below), and doesn't require mipmaps.
 - **RGSS Mipmap Bias -1.0**: a bit faster than RGSS, and requires mipmaps.
 
 | Type | Defold Material | Sharp Sprite Material |
 | ---- | --------------- | --------------------- |
+| **Mipmap Bias -1.0** | | |
+| GUI  | `/builtins/materials/gui.material` | `/sharp_sprite/mipmap_bias/materials/gui.material` |
+| ParticleFX  | `/builtins/materials/particlefx.material` | `/sharp_sprite/mipmap_bias/materials/particlefx.material` |
+| Spine  | `/builtins/materials/spine.material` | `/sharp_sprite/mipmap_bias/materials/spine.material` |
+| Sprite  | `/builtins/materials/sprite.material` | `/sharp_sprite/mipmap_bias/materials/sprite.material` |
+| Tilemap  | `/builtins/materials/tile_map.material` | `/sharp_sprite/mipmap_bias/materials/tile_map.material` |
 | **RGSS** | | |
 | GUI  | `/builtins/materials/gui.material` | `/sharp_sprite/rgss/materials/gui.material` |
 | ParticleFX  | `/builtins/materials/particlefx.material` | `/sharp_sprite/rgss/materials/particlefx.material` |
@@ -43,12 +45,6 @@ Sharp Sprite has materials that are drop-in replacement for the standard 2D mate
 | Spine  | `/builtins/materials/spine.material` | `/sharp_sprite/rgss_bias/materials/spine.material` |
 | Sprite  | `/builtins/materials/sprite.material` | `/sharp_sprite/rgss_bias/materials/sprite.material` |
 | Tilemap  | `/builtins/materials/tile_map.material` | `/sharp_sprite/rgss_bias/materials/tile_map.material` |
-| **Mipmap Bias -1.0** | | |
-| GUI  | `/builtins/materials/gui.material` | `/sharp_sprite/mipmap_bias/materials/gui.material` |
-| ParticleFX  | `/builtins/materials/particlefx.material` | `/sharp_sprite/mipmap_bias/materials/particlefx.material` |
-| Spine  | `/builtins/materials/spine.material` | `/sharp_sprite/mipmap_bias/materials/spine.material` |
-| Sprite  | `/builtins/materials/sprite.material` | `/sharp_sprite/mipmap_bias/materials/sprite.material` |
-| Tilemap  | `/builtins/materials/tile_map.material` | `/sharp_sprite/mipmap_bias/materials/tile_map.material` |
 
 ## Notes
 
