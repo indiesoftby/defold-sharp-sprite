@@ -1,7 +1,7 @@
 name: "label"
 tags: "tile"
-vertex_program: "/builtins/fonts/font-fnt.vp"
-fragment_program: "/sharp_sprite/fonts/font-fnt.fp"
+vertex_program: "/builtins/fonts/font.vp"
+fragment_program: "/sharp_sprite/rgss/fonts/font.fp"
 vertex_space: VERTEX_SPACE_WORLD
 vertex_constants {
   name: "view_proj"

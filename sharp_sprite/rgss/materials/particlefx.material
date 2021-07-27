@@ -1,7 +1,7 @@
-name: "spine"
-tags: "tile"
-vertex_program: "/builtins/materials/spine.vp"
-fragment_program: "/sharp_sprite/materials/spine.fp"
+name: "particlefx"
+tags: "particle"
+vertex_program: "/builtins/materials/particlefx.vp"
+fragment_program: "/sharp_sprite/rgss/materials/particlefx.fp"
 vertex_space: VERTEX_SPACE_WORLD
 vertex_constants {
   name: "view_proj"

@@ -1,60 +1,72 @@
 local app_window = require("demo.app.window")
+local cursor = require "in.cursor"
 
-local sprites = { 
-    "/sharp_sprite1#sprite_rgss",
-    "/sharp_sprite2#sprite_rgss",
-    "/sharp_sprite1_straight#sprite_rgss",
-    "/sharp_sprite2_straight#sprite_rgss",
-    "/sharp_sprite1_moving#sprite_rgss",
-    "/sharp_sprite2_moving#sprite_rgss",
-
-    "/sharp_sprite1#sprite_mipmap_off",
-    "/sharp_sprite2#sprite_mipmap_on",
-    "/sharp_sprite1_straight#sprite_mipmap_off",
-    "/sharp_sprite2_straight#sprite_mipmap_on",
-    "/sharp_sprite1_moving#sprite_mipmap_off",
-    "/sharp_sprite2_moving#sprite_mipmap_on"
+local sprites_objs = { 
+    "/sprite1",
+    "/sprite1_moving",
+    "/sprite1_straight"
 }
 
-local labels = { 
-    "/labels#label_rgss1",
-    "/labels#label_rgss2",
-    "/labels#label_rgss1",
-    "/labels#label_rgss2",
-    "/labels#label_rgss1",
-    "/labels#label_rgss2",
-
-    "/labels#label_mipmap_off",
-    "/labels#label_mipmap_on",
-    "/labels#label_mipmap_off",
-    "/labels#label_mipmap_on",
-    "/labels#label_mipmap_off",
-    "/labels#label_mipmap_on",
-
-    "/labels#label_help_rgss",
-    "/labels#label_help_rgss_on",
-    "/labels#label_help_standard",
-    "/labels#label_help_rgss_off"
+local sprites_names = {
+    "sprite_default",
+    "sprite_mipmap_off",
+    "sprite_mipmap_biased",
+    "sprite_rgss",
+    "sprite_rgss_biased"
 }
 
-local function enable_sprite(self, nums)
-    for _, num in pairs(nums) do
-        if sprites[num] then
-            msg.post(sprites[num], "enable")
+local function find_selected(self, group_num)
+    local g = self.g[group_num]
+    for i, b in pairs(g) do
+        if b.selected then
+            return i, b
         end
-        if labels[num] then
-            msg.post(labels[num], "enable")
-        end
+    end
+    return 1, g[1]
+end
+
+local function select_button(self, group, num)
+    local _, b = find_selected(self, group)
+    b.selected = false
+    msg.post(b.receiver, "changed", b)
+
+    local g = self.g[group]
+    local b = g[num]
+    b.selected = true
+    msg.post(b.receiver, "changed", b)
+end
+
+local function disable_sprite(self, i)
+    for _, obj in pairs(sprites_objs) do
+        msg.post(msg.url(nil, obj, sprites_names[i]), "disable")
     end
 end
 
-local function disable_sprite(self, nums)
-    for _, num in pairs(nums) do
-        if sprites[num] then
-            msg.post(sprites[num], "disable")
+local function enable_sprite(self, i)
+    for _, obj in pairs(sprites_objs) do
+        msg.post(msg.url(nil, obj, sprites_names[i]), "enable")
+    end
+end
+
+local function activate_group(self, group_num)
+    for gi, g in pairs(self.g) do
+        for i, b in pairs(g) do
+            if b.active then
+                b.active = false
+                msg.post(b.receiver, "changed", b)
+
+                disable_sprite(self, i)
+            end
         end
-        if labels[num] then
-            msg.post(labels[num], "disable")
+    end
+
+    local g = self.g[group_num]
+    for i, b in pairs(g) do
+        if b.selected then
+            b.active = true
+            msg.post(b.receiver, "changed", b)
+
+            enable_sprite(self, i)
         end
     end
 end
@@ -66,18 +78,27 @@ function init(self)
     app_window.resize()
     app_window.center()
 
-    disable_sprite(self, { 1, 2, 3, 4, 5, 6, 13, 14 })
-    enable_sprite(self, { 7, 8, 9, 10, 11, 12, 15, 16 })
+    self.g = { {}, {} }
+
+    for i, _ in pairs(sprites_names) do
+        disable_sprite(self, i)
+    end
 end
 
-function on_input(self, action_id, action)
-    if action_id == hash("touch") then
-        if action.pressed then
-            enable_sprite(self, { 1, 2, 3, 4, 5, 6, 13, 14 })
-            disable_sprite(self, { 7, 8, 9, 10, 11, 12, 15, 16 })
-        elseif action.released then
-            disable_sprite(self, { 1, 2, 3, 4, 5, 6, 13, 14 })
-            enable_sprite(self, { 7, 8, 9, 10, 11, 12, 15, 16 })
+function on_message(self, msg_id, m, sender)
+    if msg_id == hash("button_init") then
+        self.g[m.group][m.num] = { receiver = sender, selected = m.selected, active = false }
+
+        if m.group == 1 and m.selected then
+            activate_group(self, 1)
+        end
+    elseif msg_id == hash("button_pressed") then
+        select_button(self, m.group, m.num)
+
+        activate_group(self, m.group)
+    elseif msg_id == hash("button_released") then
+        if m.group == 2 then
+            activate_group(self, 1)
         end
     end
 end

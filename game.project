@@ -17,7 +17,8 @@ input_method = HiddenInputField
 title = sharp_sprite
 version = 0.1.2
 publisher = Indiesoft LLC
-dependencies#0 = https://github.com/subsoap/defos/archive/v2.4.2.zip
+dependencies#0 = https://github.com/subsoap/defos/archive/v2.5.0.zip
+dependencies#1 = https://github.com/britzl/defold-input/archive/refs/tags/4.1.4.zip
 
 [library]
 include_dirs = sharp_sprite
@@ -34,4 +35,7 @@ clear_color_blue = 0.1
 [html5]
 scale_mode = fit
 cssfile = /builtins/manifests/web/dark_theme.css
+
+[physics]
+scale = 0.01
 

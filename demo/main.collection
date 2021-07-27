@@ -1,11 +1,264 @@
 name: "main"
+collection_instances {
+  id: "shader_default"
+  collection: "/demo/shader_button.collection"
+  position {
+    x: 1096.0
+    y: 1470.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  instance_properties {
+    id: "mode1"
+    properties {
+      id: "button"
+      properties {
+        id: "selected"
+        value: "true"
+        type: PROPERTY_TYPE_BOOLEAN
+      }
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+collection_instances {
+  id: "shader_mipmap_off"
+  collection: "/demo/shader_button.collection"
+  position {
+    x: 1096.0
+    y: 1320.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  instance_properties {
+    id: "label"
+    properties {
+      id: "shader_label"
+      properties {
+        id: "num"
+        value: "2.0"
+        type: PROPERTY_TYPE_NUMBER
+      }
+    }
+  }
+  instance_properties {
+    id: "mode1"
+    properties {
+      id: "button"
+      properties {
+        id: "num"
+        value: "2.0"
+        type: PROPERTY_TYPE_NUMBER
+      }
+      properties {
+        id: "selected"
+        value: "false"
+        type: PROPERTY_TYPE_BOOLEAN
+      }
+    }
+  }
+  instance_properties {
+    id: "mode2"
+    properties {
+      id: "button"
+      properties {
+        id: "num"
+        value: "2.0"
+        type: PROPERTY_TYPE_NUMBER
+      }
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+collection_instances {
+  id: "shader_rgss"
+  collection: "/demo/shader_button.collection"
+  position {
+    x: 1096.0
+    y: 1020.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  instance_properties {
+    id: "label"
+    properties {
+      id: "shader_label"
+      properties {
+        id: "num"
+        value: "4.0"
+        type: PROPERTY_TYPE_NUMBER
+      }
+    }
+  }
+  instance_properties {
+    id: "mode1"
+    properties {
+      id: "button"
+      properties {
+        id: "num"
+        value: "4.0"
+        type: PROPERTY_TYPE_NUMBER
+      }
+    }
+  }
+  instance_properties {
+    id: "mode2"
+    properties {
+      id: "button"
+      properties {
+        id: "num"
+        value: "4.0"
+        type: PROPERTY_TYPE_NUMBER
+      }
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+collection_instances {
+  id: "shader_rgss_biased"
+  collection: "/demo/shader_button.collection"
+  position {
+    x: 1096.0
+    y: 870.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  instance_properties {
+    id: "label"
+    properties {
+      id: "shader_label"
+      properties {
+        id: "num"
+        value: "5.0"
+        type: PROPERTY_TYPE_NUMBER
+      }
+    }
+  }
+  instance_properties {
+    id: "mode1"
+    properties {
+      id: "button"
+      properties {
+        id: "num"
+        value: "5.0"
+        type: PROPERTY_TYPE_NUMBER
+      }
+    }
+  }
+  instance_properties {
+    id: "mode2"
+    properties {
+      id: "button"
+      properties {
+        id: "num"
+        value: "5.0"
+        type: PROPERTY_TYPE_NUMBER
+      }
+      properties {
+        id: "selected"
+        value: "true"
+        type: PROPERTY_TYPE_BOOLEAN
+      }
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+collection_instances {
+  id: "shader_mipmap_biased"
+  collection: "/demo/shader_button.collection"
+  position {
+    x: 1096.0
+    y: 1170.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  instance_properties {
+    id: "label"
+    properties {
+      id: "shader_label"
+      properties {
+        id: "num"
+        value: "3.0"
+        type: PROPERTY_TYPE_NUMBER
+      }
+    }
+  }
+  instance_properties {
+    id: "mode1"
+    properties {
+      id: "button"
+      properties {
+        id: "num"
+        value: "3.0"
+        type: PROPERTY_TYPE_NUMBER
+      }
+    }
+  }
+  instance_properties {
+    id: "mode2"
+    properties {
+      id: "button"
+      properties {
+        id: "num"
+        value: "3.0"
+        type: PROPERTY_TYPE_NUMBER
+      }
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
 scale_along_z: 0
 embedded_instances {
-  id: "sharp_sprite1"
+  id: "sprite1"
   data: "embedded_components {\n"
   "  id: \"sprite_mipmap_off\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
+  "  data: \"tile_set: \\\"/demo/assets/demo.atlas\\\"\\n"
   "default_animation: \\\"demo_image\\\"\\n"
   "material: \\\"/demo/materials/builtin_sprite_mipmap_off.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
@@ -25,9 +278,69 @@ embedded_instances {
   "embedded_components {\n"
   "  id: \"sprite_rgss\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
+  "  data: \"tile_set: \\\"/demo/assets/demo.atlas\\\"\\n"
   "default_animation: \\\"demo_image\\\"\\n"
-  "material: \\\"/sharp_sprite/materials/sprite.material\\\"\\n"
+  "material: \\\"/sharp_sprite/rgss/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite_default\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/demo/assets/demo.atlas\\\"\\n"
+  "default_animation: \\\"demo_image\\\"\\n"
+  "material: \\\"/demo/materials/builtin_sprite_mipmap_on.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite_rgss_biased\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/demo/assets/demo.atlas\\\"\\n"
+  "default_animation: \\\"demo_image\\\"\\n"
+  "material: \\\"/sharp_sprite/rgss_biased/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite_mipmap_biased\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/demo/assets/demo.atlas\\\"\\n"
+  "default_animation: \\\"demo_image\\\"\\n"
+  "material: \\\"/sharp_sprite/mipmap_biased/materials/sprite.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
   "  position {\n"
@@ -44,8 +357,8 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 375.0
-    y: 1338.0
+    x: 341.0
+    y: 1305.0
     z: 0.0
   }
   rotation {
@@ -55,15 +368,15 @@ embedded_instances {
     w: 0.976296
   }
   scale3 {
-    x: 0.25
-    y: 0.25
-    z: 0.25
+    x: 0.22
+    y: 0.22
+    z: 0.22
   }
 }
 embedded_instances {
   id: "main"
   data: "components {\n"
-  "  id: \"script\"\n"
+  "  id: \"main\"\n"
   "  component: \"/demo/main.script\"\n"
   "  position {\n"
   "    x: 0.0\n"
@@ -98,78 +411,24 @@ embedded_instances {
 embedded_instances {
   id: "labels"
   data: "embedded_components {\n"
-  "  id: \"label_rgss1\"\n"
+  "  id: \"label_help\"\n"
   "  type: \"label\"\n"
   "  data: \"size {\\n"
-  "  x: 1000.0\\n"
+  "  x: 2000.0\\n"
   "  y: 70.0\\n"
   "  z: 0.0\\n"
   "  w: 0.0\\n"
   "}\\n"
   "scale {\\n"
-  "  x: 0.5\\n"
-  "  y: 0.5\\n"
-  "  z: 0.5\\n"
+  "  x: 0.75\\n"
+  "  y: 0.75\\n"
+  "  z: 0.75\\n"
   "  w: 0.0\\n"
   "}\\n"
   "color {\\n"
-  "  x: 1.0\\n"
-  "  y: 1.0\\n"
-  "  z: 1.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "outline {\\n"
-  "  x: 0.0\\n"
-  "  y: 0.0\\n"
-  "  z: 0.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "shadow {\\n"
-  "  x: 0.0\\n"
-  "  y: 0.0\\n"
-  "  z: 0.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "leading: 1.0\\n"
-  "tracking: 0.0\\n"
-  "pivot: PIVOT_CENTER\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "line_break: false\\n"
-  "text: \\\"Rotated Grid Super-Sampling\\\"\\n"
-  "font: \\\"/demo/assets/font.font\\\"\\n"
-  "material: \\\"/sharp_sprite/fonts/label-singlelayer.material\\\"\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  "embedded_components {\n"
-  "  id: \"label_mipmap_off\"\n"
-  "  type: \"label\"\n"
-  "  data: \"size {\\n"
-  "  x: 1000.0\\n"
-  "  y: 70.0\\n"
-  "  z: 0.0\\n"
-  "  w: 0.0\\n"
-  "}\\n"
-  "scale {\\n"
-  "  x: 0.5\\n"
-  "  y: 0.5\\n"
-  "  z: 0.5\\n"
-  "  w: 0.0\\n"
-  "}\\n"
-  "color {\\n"
-  "  x: 0.6\\n"
+  "  x: 0.18039216\\n"
   "  y: 0.8\\n"
-  "  z: 0.6\\n"
+  "  z: 0.44313726\\n"
   "  w: 1.0\\n"
   "}\\n"
   "outline {\\n"
@@ -189,13 +448,13 @@ embedded_instances {
   "pivot: PIVOT_CENTER\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "line_break: false\\n"
-  "text: \\\"Builtin Sprite (MipMaps OFF)\\\"\\n"
+  "text: \\\"CLICK & HOLD A GREEN BUTTON TO COMPARE SHADERS\\\"\\n"
   "font: \\\"/demo/assets/font.font\\\"\\n"
-  "material: \\\"/sharp_sprite/fonts/label-singlelayer.material\\\"\\n"
+  "material: \\\"/sharp_sprite/rgss/fonts/label-singlelayer.material\\\"\\n"
   "\"\n"
   "  position {\n"
   "    x: 0.0\n"
-  "    y: 0.0\n"
+  "    y: 39.0\n"
   "    z: 0.0\n"
   "  }\n"
   "  rotation {\n"
@@ -206,7 +465,7 @@ embedded_instances {
   "  }\n"
   "}\n"
   "embedded_components {\n"
-  "  id: \"label_mipmap_on\"\n"
+  "  id: \"label_title\"\n"
   "  type: \"label\"\n"
   "  data: \"size {\\n"
   "  x: 1000.0\\n"
@@ -215,63 +474,9 @@ embedded_instances {
   "  w: 0.0\\n"
   "}\\n"
   "scale {\\n"
-  "  x: 0.5\\n"
-  "  y: 0.5\\n"
-  "  z: 0.5\\n"
-  "  w: 0.0\\n"
-  "}\\n"
-  "color {\\n"
-  "  x: 1.0\\n"
-  "  y: 0.8\\n"
-  "  z: 0.4\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "outline {\\n"
-  "  x: 0.0\\n"
-  "  y: 0.0\\n"
-  "  z: 0.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "shadow {\\n"
-  "  x: 0.0\\n"
-  "  y: 0.0\\n"
-  "  z: 0.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "leading: 1.0\\n"
-  "tracking: 0.0\\n"
-  "pivot: PIVOT_CENTER\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "line_break: false\\n"
-  "text: \\\"Builtin Sprite (MipMaps ON)\\\"\\n"
-  "font: \\\"/demo/assets/font.font\\\"\\n"
-  "material: \\\"/sharp_sprite/fonts/label-singlelayer.material\\\"\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 750.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  "embedded_components {\n"
-  "  id: \"label_rgss2\"\n"
-  "  type: \"label\"\n"
-  "  data: \"size {\\n"
-  "  x: 1000.0\\n"
-  "  y: 70.0\\n"
-  "  z: 0.0\\n"
-  "  w: 0.0\\n"
-  "}\\n"
-  "scale {\\n"
-  "  x: 0.5\\n"
-  "  y: 0.5\\n"
-  "  z: 0.5\\n"
+  "  x: 1.5\\n"
+  "  y: 1.5\\n"
+  "  z: 1.5\\n"
   "  w: 0.0\\n"
   "}\\n"
   "color {\\n"
@@ -297,229 +502,13 @@ embedded_instances {
   "pivot: PIVOT_CENTER\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "line_break: false\\n"
-  "text: \\\"Rotated Grid Super-Sampling\\\"\\n"
+  "text: \\\"SHARP SPRITE\\\"\\n"
   "font: \\\"/demo/assets/font.font\\\"\\n"
-  "material: \\\"/sharp_sprite/fonts/label-singlelayer.material\\\"\\n"
+  "material: \\\"/sharp_sprite/rgss/fonts/label-singlelayer.material\\\"\\n"
   "\"\n"
   "  position {\n"
-  "    x: 750.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
   "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  "embedded_components {\n"
-  "  id: \"label_help_standard\"\n"
-  "  type: \"label\"\n"
-  "  data: \"size {\\n"
-  "  x: 1000.0\\n"
-  "  y: 70.0\\n"
-  "  z: 0.0\\n"
-  "  w: 0.0\\n"
-  "}\\n"
-  "scale {\\n"
-  "  x: 1.0\\n"
-  "  y: 1.0\\n"
-  "  z: 1.0\\n"
-  "  w: 0.0\\n"
-  "}\\n"
-  "color {\\n"
-  "  x: 1.0\\n"
-  "  y: 1.0\\n"
-  "  z: 1.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "outline {\\n"
-  "  x: 0.0\\n"
-  "  y: 0.0\\n"
-  "  z: 0.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "shadow {\\n"
-  "  x: 0.0\\n"
-  "  y: 0.0\\n"
-  "  z: 0.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "leading: 1.0\\n"
-  "tracking: 0.0\\n"
-  "pivot: PIVOT_CENTER\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "line_break: false\\n"
-  "text: \\\"Click and Hold\\\"\\n"
-  "font: \\\"/demo/assets/font.font\\\"\\n"
-  "material: \\\"/builtins/fonts/label.material\\\"\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 375.0\n"
-  "    y: 145.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  "embedded_components {\n"
-  "  id: \"label_help_rgss\"\n"
-  "  type: \"label\"\n"
-  "  data: \"size {\\n"
-  "  x: 1000.0\\n"
-  "  y: 70.0\\n"
-  "  z: 0.0\\n"
-  "  w: 0.0\\n"
-  "}\\n"
-  "scale {\\n"
-  "  x: 1.0\\n"
-  "  y: 1.0\\n"
-  "  z: 1.0\\n"
-  "  w: 0.0\\n"
-  "}\\n"
-  "color {\\n"
-  "  x: 1.0\\n"
-  "  y: 1.0\\n"
-  "  z: 1.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "outline {\\n"
-  "  x: 0.0\\n"
-  "  y: 0.0\\n"
-  "  z: 0.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "shadow {\\n"
-  "  x: 0.0\\n"
-  "  y: 0.0\\n"
-  "  z: 0.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "leading: 1.0\\n"
-  "tracking: 0.0\\n"
-  "pivot: PIVOT_CENTER\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "line_break: false\\n"
-  "text: \\\"Click and Hold\\\"\\n"
-  "font: \\\"/demo/assets/font.font\\\"\\n"
-  "material: \\\"/sharp_sprite/fonts/label.material\\\"\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 375.0\n"
-  "    y: 145.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  "embedded_components {\n"
-  "  id: \"label_help_rgss_on\"\n"
-  "  type: \"label\"\n"
-  "  data: \"size {\\n"
-  "  x: 500.0\\n"
-  "  y: 70.0\\n"
-  "  z: 0.0\\n"
-  "  w: 0.0\\n"
-  "}\\n"
-  "scale {\\n"
-  "  x: 0.5\\n"
-  "  y: 0.5\\n"
-  "  z: 0.5\\n"
-  "  w: 0.0\\n"
-  "}\\n"
-  "color {\\n"
-  "  x: 1.0\\n"
-  "  y: 1.0\\n"
-  "  z: 1.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "outline {\\n"
-  "  x: 0.0\\n"
-  "  y: 0.0\\n"
-  "  z: 0.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "shadow {\\n"
-  "  x: 0.0\\n"
-  "  y: 0.0\\n"
-  "  z: 0.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "leading: 1.0\\n"
-  "tracking: 0.0\\n"
-  "pivot: PIVOT_W\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "line_break: false\\n"
-  "text: \\\"<- RGSS\\\"\\n"
-  "font: \\\"/demo/assets/font.font\\\"\\n"
-  "material: \\\"/sharp_sprite/fonts/label-singlelayer.material\\\"\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 712.0\n"
-  "    y: 146.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  "embedded_components {\n"
-  "  id: \"label_help_rgss_off\"\n"
-  "  type: \"label\"\n"
-  "  data: \"size {\\n"
-  "  x: 500.0\\n"
-  "  y: 70.0\\n"
-  "  z: 0.0\\n"
-  "  w: 0.0\\n"
-  "}\\n"
-  "scale {\\n"
-  "  x: 0.5\\n"
-  "  y: 0.5\\n"
-  "  z: 0.5\\n"
-  "  w: 0.0\\n"
-  "}\\n"
-  "color {\\n"
-  "  x: 1.0\\n"
-  "  y: 1.0\\n"
-  "  z: 1.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "outline {\\n"
-  "  x: 0.0\\n"
-  "  y: 0.0\\n"
-  "  z: 0.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "shadow {\\n"
-  "  x: 0.0\\n"
-  "  y: 0.0\\n"
-  "  z: 0.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "leading: 1.0\\n"
-  "tracking: 0.0\\n"
-  "pivot: PIVOT_W\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "line_break: false\\n"
-  "text: \\\"<- Default\\\"\\n"
-  "font: \\\"/demo/assets/font.font\\\"\\n"
-  "material: \\\"/sharp_sprite/fonts/label-singlelayer.material\\\"\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 712.0\n"
-  "    y: 146.0\n"
+  "    y: 181.0\n"
   "    z: 0.0\n"
   "  }\n"
   "  rotation {\n"
@@ -531,8 +520,8 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 375.0
-    y: 1660.0
+    x: 750.0
+    y: 1687.0
     z: 0.0
   }
   rotation {
@@ -548,71 +537,11 @@ embedded_instances {
   }
 }
 embedded_instances {
-  id: "sharp_sprite2"
-  data: "embedded_components {\n"
-  "  id: \"sprite_mipmap_on\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
-  "default_animation: \\\"demo_image\\\"\\n"
-  "material: \\\"/demo/materials/builtin_sprite_mipmap_on.material\\\"\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  "embedded_components {\n"
-  "  id: \"sprite_rgss\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
-  "default_animation: \\\"demo_image\\\"\\n"
-  "material: \\\"/sharp_sprite/materials/sprite.material\\\"\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  ""
-  position {
-    x: 1125.0
-    y: 1338.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.21643962
-    w: 0.976296
-  }
-  scale3 {
-    x: 0.25
-    y: 0.25
-    z: 0.25
-  }
-}
-embedded_instances {
-  id: "sharp_sprite1_straight"
+  id: "sprite1_straight"
   data: "embedded_components {\n"
   "  id: \"sprite_mipmap_off\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
+  "  data: \"tile_set: \\\"/demo/assets/demo.atlas\\\"\\n"
   "default_animation: \\\"demo_image\\\"\\n"
   "material: \\\"/demo/materials/builtin_sprite_mipmap_off.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
@@ -632,9 +561,9 @@ embedded_instances {
   "embedded_components {\n"
   "  id: \"sprite_rgss\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
+  "  data: \"tile_set: \\\"/demo/assets/demo.atlas\\\"\\n"
   "default_animation: \\\"demo_image\\\"\\n"
-  "material: \\\"/sharp_sprite/materials/sprite.material\\\"\\n"
+  "material: \\\"/sharp_sprite/rgss/materials/sprite.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
   "  position {\n"
@@ -649,30 +578,10 @@ embedded_instances {
   "    w: 1.0\n"
   "  }\n"
   "}\n"
-  ""
-  position {
-    x: 375.0
-    y: 829.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 0.2
-    y: 0.2
-    z: 0.2
-  }
-}
-embedded_instances {
-  id: "sharp_sprite2_straight"
-  data: "embedded_components {\n"
-  "  id: \"sprite_mipmap_on\"\n"
+  "embedded_components {\n"
+  "  id: \"sprite_default\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
+  "  data: \"tile_set: \\\"/demo/assets/demo.atlas\\\"\\n"
   "default_animation: \\\"demo_image\\\"\\n"
   "material: \\\"/demo/materials/builtin_sprite_mipmap_on.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
@@ -690,11 +599,31 @@ embedded_instances {
   "  }\n"
   "}\n"
   "embedded_components {\n"
-  "  id: \"sprite_rgss\"\n"
+  "  id: \"sprite_rgss_biased\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
+  "  data: \"tile_set: \\\"/demo/assets/demo.atlas\\\"\\n"
   "default_animation: \\\"demo_image\\\"\\n"
-  "material: \\\"/sharp_sprite/materials/sprite.material\\\"\\n"
+  "material: \\\"/sharp_sprite/rgss_biased/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite_mipmap_biased\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/demo/assets/demo.atlas\\\"\\n"
+  "default_animation: \\\"demo_image\\\"\\n"
+  "material: \\\"/sharp_sprite/mipmap_biased/materials/sprite.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
   "  position {\n"
@@ -711,8 +640,8 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 1125.0
-    y: 829.0
+    x: 341.0
+    y: 804.0
     z: 0.0
   }
   rotation {
@@ -728,7 +657,7 @@ embedded_instances {
   }
 }
 embedded_instances {
-  id: "sharp_sprite1_moving"
+  id: "sprite1_moving"
   data: "components {\n"
   "  id: \"move\"\n"
   "  component: \"/demo/move.script\"\n"
@@ -747,7 +676,7 @@ embedded_instances {
   "embedded_components {\n"
   "  id: \"sprite_mipmap_off\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
+  "  data: \"tile_set: \\\"/demo/assets/demo.atlas\\\"\\n"
   "default_animation: \\\"demo_image\\\"\\n"
   "material: \\\"/demo/materials/builtin_sprite_mipmap_off.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
@@ -767,9 +696,9 @@ embedded_instances {
   "embedded_components {\n"
   "  id: \"sprite_rgss\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
+  "  data: \"tile_set: \\\"/demo/assets/demo.atlas\\\"\\n"
   "default_animation: \\\"demo_image\\\"\\n"
-  "material: \\\"/sharp_sprite/materials/sprite.material\\\"\\n"
+  "material: \\\"/sharp_sprite/rgss/materials/sprite.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
   "  position {\n"
@@ -784,45 +713,10 @@ embedded_instances {
   "    w: 1.0\n"
   "  }\n"
   "}\n"
-  ""
-  position {
-    x: 375.0
-    y: 381.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.043619387
-    w: 0.99904823
-  }
-  scale3 {
-    x: 0.25
-    y: 0.25
-    z: 0.25
-  }
-}
-embedded_instances {
-  id: "sharp_sprite2_moving"
-  data: "components {\n"
-  "  id: \"move\"\n"
-  "  component: \"/demo/move.script\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
   "embedded_components {\n"
-  "  id: \"sprite_mipmap_on\"\n"
+  "  id: \"sprite_default\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
+  "  data: \"tile_set: \\\"/demo/assets/demo.atlas\\\"\\n"
   "default_animation: \\\"demo_image\\\"\\n"
   "material: \\\"/demo/materials/builtin_sprite_mipmap_on.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
@@ -840,11 +734,31 @@ embedded_instances {
   "  }\n"
   "}\n"
   "embedded_components {\n"
-  "  id: \"sprite_rgss\"\n"
+  "  id: \"sprite_rgss_biased\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/demo/assets/main.atlas\\\"\\n"
+  "  data: \"tile_set: \\\"/demo/assets/demo.atlas\\\"\\n"
   "default_animation: \\\"demo_image\\\"\\n"
-  "material: \\\"/sharp_sprite/materials/sprite.material\\\"\\n"
+  "material: \\\"/sharp_sprite/rgss_biased/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite_mipmap_biased\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/demo/assets/demo.atlas\\\"\\n"
+  "default_animation: \\\"demo_image\\\"\\n"
+  "material: \\\"/sharp_sprite/mipmap_biased/materials/sprite.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
   "  position {\n"
@@ -861,8 +775,8 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 1125.0
-    y: 381.0
+    x: 341.0
+    y: 348.0
     z: 0.0
   }
   rotation {
@@ -875,5 +789,95 @@ embedded_instances {
     x: 0.25
     y: 0.25
     z: 0.25
+  }
+}
+embedded_instances {
+  id: "cursor"
+  data: "components {\n"
+  "  id: \"cursor\"\n"
+  "  component: \"/in/cursor.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"drag\"\n"
+  "    value: \"false\"\n"
+  "    type: PROPERTY_TYPE_BOOLEAN\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"acquire_input_focus\"\n"
+  "    value: \"true\"\n"
+  "    type: PROPERTY_TYPE_BOOLEAN\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"collisionobject\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_TRIGGER\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"default\\\"\\n"
+  "mask: \\\"default\\\"\\n"
+  "embedded_collision_shape {\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_SPHERE\\n"
+  "    position {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 0\\n"
+  "    count: 1\\n"
+  "  }\\n"
+  "  data: 10.0\\n"
+  "}\\n"
+  "linear_damping: 0.0\\n"
+  "angular_damping: 0.0\\n"
+  "locked_rotation: false\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
   }
 }

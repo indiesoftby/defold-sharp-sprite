@@ -1,7 +1,7 @@
-name: "font"
-tags: "gui"
+name: "label"
+tags: "tile"
 vertex_program: "/builtins/fonts/font.vp"
-fragment_program: "/sharp_sprite/fonts/font.fp"
+fragment_program: "/sharp_sprite/rgss/fonts/font-singlelayer.fp"
 vertex_space: VERTEX_SPACE_WORLD
 vertex_constants {
   name: "view_proj"

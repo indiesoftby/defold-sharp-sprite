@@ -1,0 +1,39 @@
+go.property("num", 1)
+go.property("group", 1)
+go.property("selected", false)
+go.property("selected_mode", 1)
+go.property("active", false)
+
+local function update_sprite(self)
+    if self.selected then
+        sprite.play_flipbook("#sprite", "demo_button_mode" .. self.selected_mode)
+    else
+        sprite.play_flipbook("#sprite", "demo_button")
+    end
+
+    msg.post("#eye", self.active and "enable" or "disable")
+end
+
+function init(self)
+    update_sprite(self)
+
+    msg.post("/main", "button_init", { num = self.num, group = self.group, selected = self.selected })
+end
+
+function final(self)
+end
+
+function update(self, dt)
+end
+
+function on_message(self, message_id, message, sender)
+    if message_id == hash("pressed") then
+        msg.post("/main", "button_pressed", { num = self.num, group = self.group })
+    elseif message_id == hash("released") then
+        msg.post("/main", "button_released", { num = self.num, group = self.group })
+    elseif message_id == hash("changed") then
+        self.active = message.active
+        self.selected = message.selected
+        update_sprite(self)
+    end
+end
