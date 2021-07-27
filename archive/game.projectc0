@@ -1,6 +1,6 @@
 [project]
 title = sharp_sprite
-version = 0.1.2
+version = 0.2.0
 write_log = 0
 compress_archive = 1
 publisher = Indiesoft LLC
@@ -32,7 +32,7 @@ debug_alpha = 0.9
 world_count = 4
 gravity_x = 0
 gravity_z = 0
-scale = 1
+scale = 0.01
 allow_dynamic_transforms = 1
 debug_scale = 30
 max_collisions = 64
