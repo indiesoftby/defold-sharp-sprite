@@ -1,6 +1,6 @@
 name: "spine"
 tags: "tile"
-vertex_program: "/builtins/materials/spine.vp"
+vertex_program: "/sharp_sprite/rgss/materials/spine.vp"
 fragment_program: "/sharp_sprite/mipmap_bias/materials/spine.fp"
 vertex_space: VERTEX_SPACE_WORLD
 vertex_constants {
