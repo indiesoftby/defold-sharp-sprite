@@ -26,13 +26,13 @@ Sharp Sprite contains a collection of materials that are a drop-in replacement f
 | **Mipmap Bias -1.0** | | |
 | GUI  | `/builtins/materials/gui.material` | `/sharp_sprite/mipmap_bias/materials/gui.material` |
 | ParticleFX  | `/builtins/materials/particlefx.material` | `/sharp_sprite/mipmap_bias/materials/particlefx.material` |
-| Spine  | `/builtins/materials/spine.material` | `/sharp_sprite/mipmap_bias/materials/spine.material` |
+| Spine  | `/defold-spine/assets/spine.material` | `/sharp_sprite/mipmap_bias/materials/spine.material` |
 | Sprite  | `/builtins/materials/sprite.material` | `/sharp_sprite/mipmap_bias/materials/sprite.material` |
 | Tilemap  | `/builtins/materials/tile_map.material` | `/sharp_sprite/mipmap_bias/materials/tile_map.material` |
 | **RGSS** | | |
 | GUI  | `/builtins/materials/gui.material` | `/sharp_sprite/rgss/materials/gui.material` |
 | ParticleFX  | `/builtins/materials/particlefx.material` | `/sharp_sprite/rgss/materials/particlefx.material` |
-| Spine  | `/builtins/materials/spine.material` | `/sharp_sprite/rgss/materials/spine.material` |
+| Spine  | `/defold-spine/assets/spine.material` | `/sharp_sprite/rgss/materials/spine.material` |
 | Sprite  | `/builtins/materials/sprite.material` | `/sharp_sprite/rgss/materials/sprite.material` |
 | Tilemap  | `/builtins/materials/tile_map.material` | `/sharp_sprite/rgss/materials/tile_map.material` |
 | Font (Bitmap)  | `/builtins/fonts/font.material` | `/sharp_sprite/rgss/fonts/font.material` or `/sharp_sprite/rgss/fonts/font-singlelayer.material` |
@@ -42,7 +42,7 @@ Sharp Sprite contains a collection of materials that are a drop-in replacement f
 | **RGSS Mipmap Bias -1.0** | | |
 | GUI  | `/builtins/materials/gui.material` | `/sharp_sprite/rgss_bias/materials/gui.material` |
 | ParticleFX  | `/builtins/materials/particlefx.material` | `/sharp_sprite/rgss_bias/materials/particlefx.material` |
-| Spine  | `/builtins/materials/spine.material` | `/sharp_sprite/rgss_bias/materials/spine.material` |
+| Spine  | `/defold-spine/assets/spine.material` | `/sharp_sprite/rgss_bias/materials/spine.material` |
 | Sprite  | `/builtins/materials/sprite.material` | `/sharp_sprite/rgss_bias/materials/sprite.material` |
 | Tilemap  | `/builtins/materials/tile_map.material` | `/sharp_sprite/rgss_bias/materials/tile_map.material` |
 
