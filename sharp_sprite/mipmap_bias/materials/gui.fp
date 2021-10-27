@@ -1,4 +1,4 @@
-varying mediump vec2 var_texcoord0;
+varying highp vec2 var_texcoord0;
 varying lowp vec4 var_color;
 
 uniform lowp sampler2D texture_sampler;
