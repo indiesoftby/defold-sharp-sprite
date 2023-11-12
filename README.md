@@ -17,9 +17,9 @@ Also, **[check out the demo](https://indiesoftby.github.io/defold-sharp-sprite/)
 You can use it in your own project by adding this project as a [Defold library dependency](http://www.defold.com/manuals/libraries/). Open your `game.project` file and in the dependencies field under project add the ZIP file of a [specific release](https://github.com/indiesoftby/defold-sharp-sprite/releases).
 
 Sharp Sprite contains a collection of materials that are a drop-in replacement for the standard 2D materials:
-- **Mipmap Bias -1.0**: almost as fast as the standard materials. Use this first. If it fits your project well, keep it and don't try RGSS at all.
+- **Mipmap Bias -1.0**: almost as fast as the standard materials. Use this first. If it fits your project well, keep it and don't try RGSS at all. Not suitable, if you use Slice-9 (will blur around the edges).
 - **RGSS**: slow, and requires OES_standard_derivatives (see below), and doesn't require mipmaps.
-- **RGSS Mipmap Bias -1.0**: a bit faster than RGSS, and requires mipmaps.
+- **RGSS Mipmap Bias -1.0**: faster than RGSS, but requires mipmaps. Not suitable, if you use Slice-9 (will blur around the edges).
 
 | Type | Defold Material | Sharp Sprite Material |
 | ---- | --------------- | --------------------- |
@@ -48,10 +48,11 @@ Sharp Sprite contains a collection of materials that are a drop-in replacement f
 
 ## Notes
 
+- If you use Slice-9 in GUI or for sprites, **use RGSS material in that case**, i.e. without mipmaps.
 - RGSS requires the [OES_standard_derivatives](https://www.khronos.org/registry/OpenGL/extensions/OES/OES_standard_derivatives.txt) OpenGL extension to run. It's universally supported by WebGL 1.0, by the most of OpenGL ES 2.0 devices ([Android stats](https://opengles.gpuinfo.org/listreports.php?extension=GL_OES_standard_derivatives) and by all [iOS devices](https://developer.apple.com/library/archive/documentation/OpenGLES/Conceptual/OpenGLESHardwarePlatformGuide_iOS/OpenGLESPlatforms/OpenGLESPlatforms.html)).
 - RGSS is sampling the texture 4 times. On mobile GPUs, it can have a significant performance impact. You should always check the game performance on your target devices!
 - RGSS is blurring at 1:1 scaling.
-- RGSS doesn't use mipmapped textures. You can turn off the mipmapping in your texture profile and save 30% of disk space.
+- RGSS doesn't use mipmapped textures. You can turn off the mipmapping in your texture profile and save 30% of disk space. 
 - If your sprites use both Defold standard and Sharp Sprite materials, then it's a good idea to split them by tags to avoid breaking of draw batching:
    1. Copy Sharp Sprite material to your project and [apply tag `tile_rgss` into it.](tile_rgss_1.png)
    2. [Modify your render script to draw the tagged sprites.](tile_rgss_2.png)
