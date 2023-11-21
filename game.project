@@ -7,7 +7,6 @@ shared_state = 1
 [display]
 width = 1500
 height = 2000
-vsync = 0
 high_dpi = 1
 
 [android]
@@ -15,7 +14,7 @@ input_method = HiddenInputField
 
 [project]
 title = sharp_sprite
-version = 0.2.2
+version = demo
 publisher = Indiesoft LLC
 dependencies#0 = https://github.com/subsoap/defos/archive/v2.5.0.zip
 dependencies#1 = https://github.com/britzl/defold-input/archive/refs/tags/4.1.4.zip
