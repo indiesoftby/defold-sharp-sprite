@@ -1,6 +1,6 @@
 [project]
 title = sharp_sprite
-version = 0.2.2
+version = demo
 write_log = 0
 compress_archive = 1
 publisher = Indiesoft LLC
@@ -15,7 +15,7 @@ samples = 0
 fullscreen = 0
 update_frequency = 0
 swap_interval = 1
-vsync = 0
+vsync = 1
 display_profiles = /builtins/render/default.display_profilesc
 dynamic_orientation = 0
 display_device_info = 0
