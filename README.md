@@ -49,7 +49,7 @@ Sharp Sprite contains a collection of materials that are a drop-in replacement f
 ## Notes
 
 - If you use Slice-9 in GUI or for sprites, **use RGSS material in that case**, i.e. without mipmaps.
-- RGSS requires the [OES_standard_derivatives](https://www.khronos.org/registry/OpenGL/extensions/OES/OES_standard_derivatives.txt) OpenGL extension to run. It's universally supported by WebGL 1.0, by the most of OpenGL ES 2.0 devices ([Android stats](https://opengles.gpuinfo.org/listreports.php?extension=GL_OES_standard_derivatives) and by all [iOS devices](https://developer.apple.com/library/archive/documentation/OpenGLES/Conceptual/OpenGLESHardwarePlatformGuide_iOS/OpenGLESPlatforms/OpenGLESPlatforms.html)).
+- RGSS requires the [OES_standard_derivatives](https://www.khronos.org/registry/OpenGL/extensions/OES/OES_standard_derivatives.txt) OpenGL extension to run. It's universally supported by OpenGL, OpenGL ES 3.0, WebGL 2.0, by the most of OpenGL ES 2.0 and WebGL 1.0 devices ([Android stats](https://opengles.gpuinfo.org/listreports.php?extension=GL_OES_standard_derivatives) and by all [iOS devices](https://developer.apple.com/library/archive/documentation/OpenGLES/Conceptual/OpenGLESHardwarePlatformGuide_iOS/OpenGLESPlatforms/OpenGLESPlatforms.html)). But the shaders will work, even if derivatives are missing.
 - RGSS is sampling the texture 4 times. On mobile GPUs, it can have a significant performance impact. You should always check the game performance on your target devices!
 - RGSS is blurring at 1:1 scaling.
 - RGSS doesn't use mipmapped textures. You can turn off the mipmapping in your texture profile and save 30% of disk space. 
