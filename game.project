@@ -38,3 +38,6 @@ cssfile = /builtins/manifests/web/dark_theme.css
 [physics]
 scale = 0.01
 
+[graphics]
+texture_profiles = /demo/mipmaps.texture_profiles
+

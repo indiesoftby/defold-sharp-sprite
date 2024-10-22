@@ -2,7 +2,7 @@ go.property("num", 1)
 go.property("scale", 0.75)
 
 local labels = {
-    "Default",
+    "Default (Mipmap = On)",
     "Default (Mipmap = Off)",
     "Mipmap Bias -1.0",
     "RGSS (Mipmap = Off)",

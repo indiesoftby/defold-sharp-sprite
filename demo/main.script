@@ -1,5 +1,4 @@
 local app_window = require("demo.app.window")
-local cursor = require "in.cursor"
 
 local sprites_objs = { 
     "/sprite1",
