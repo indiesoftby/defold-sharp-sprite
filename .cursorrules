@@ -1,0 +1,18 @@
+It's an extension for the Defold game engine. The Defold engine is a 2D game engine, but it can also be used to make 3D games. It uses Lua 5.1 as its scripting language with "bit" module for bitwise operations. Developers write Lua code in the files with ".lua", ".script", ".gui_script", ".render_script", ".editor_script" extensions. Source code is formatted with 4 spaces for indentation. "snake_case" is used for variable, function, file, folder names. It uses LDoc for documentation.
+
+The example of LDoc is:
+
+```lua
+--- Summary ends with a period.
+-- Some description, can be over several lines.
+-- @tparam string p1 first parameter
+-- @tparam[opt] string p2 second parameter (optional)
+-- @treturn number a number value
+-- @see second_fun
+function mod1.first_fun(p1,p2)
+end
+```
+
+The structure of the project is the following:
+- folder "sharp_sprite" contains the Lua and GLSL shaders part of the extension.
+- folder "demo" contains the example project written in Lua for the extension.
