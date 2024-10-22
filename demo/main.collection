@@ -271,9 +271,20 @@ embedded_instances {
   "  id: \"main\"\n"
   "  component: \"/demo/main.script\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"camera\"\n"
+  "  type: \"camera\"\n"
+  "  data: \"aspect_ratio: 1.0\\n"
+  "fov: 0.7854\\n"
+  "near_z: -10.0\\n"
+  "far_z: 10.0\\n"
+  "orthographic_projection: 1\\n"
+  "\"\n"
+  "}\n"
   ""
   position {
-    y: 91.0
+    x: 750.0
+    y: 1000.0
   }
 }
 embedded_instances {
@@ -480,11 +491,6 @@ embedded_instances {
   "  properties {\n"
   "    id: \"drag\"\n"
   "    value: \"false\"\n"
-  "    type: PROPERTY_TYPE_BOOLEAN\n"
-  "  }\n"
-  "  properties {\n"
-  "    id: \"acquire_input_focus\"\n"
-  "    value: \"true\"\n"
   "    type: PROPERTY_TYPE_BOOLEAN\n"
   "  }\n"
   "}\n"

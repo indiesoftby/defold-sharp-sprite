@@ -71,18 +71,50 @@ local function activate_group(self, group_num)
     end
 end
 
+local DISPLAY_WIDTH = sys.get_config_int("display.width")
+local DISPLAY_HEIGHT = sys.get_config_int("display.height")
+
+local function screen_to_world(screen_x, screen_y, z)
+    local projection = go.get("#camera", "projection")
+    local view = go.get("#camera", "view")
+    local w, h = window.get_size()
+
+    -- https://defold.com/manuals/camera/#converting-mouse-to-world-coordinates
+    local inv = vmath.inv(projection * view)
+    local x = (2 * screen_x / w) - 1
+    local y = (2 * screen_y / h) - 1
+    local x1 = x * inv.m00 + y * inv.m01 + z * inv.m02 + inv.m03
+    local y1 = x * inv.m10 + y * inv.m11 + z * inv.m12 + inv.m13
+    return x1, y1, z or 0
+end
+
+--- Adjust camera zoom so that the original area covered by
+-- display width and height of game.project is always visible
+local function use_fixed_fit_projection()
+    local w, h = window.get_size()
+    local zoom = math.min(w / DISPLAY_WIDTH, h / DISPLAY_HEIGHT)
+    go.set("#camera", "orthographic_zoom", zoom)
+end
+
 function init(self)
-    msg.post("@render:", "use_fixed_fit_projection", { near = -1, far = 1 })
+    msg.post("#camera", "acquire_camera_focus")
+    msg.post("@render:", "use_camera_projection")
     msg.post(".", "acquire_input_focus")
 
-    app_window.resize()
-    app_window.center()
+    timer.delay(0.1, false, function()
+        app_window.resize()
+        app_window.center()
+    end)
 
     self.g = { {}, {} }
 
     for i, _ in pairs(sprites_names) do
         disable_sprite(self, i)
     end
+end
+
+function update(self, dt)
+    use_fixed_fit_projection()
 end
 
 function on_message(self, msg_id, m, sender)
@@ -100,5 +132,14 @@ function on_message(self, msg_id, m, sender)
         if m.group == 2 then
             activate_group(self, 1)
         end
+    end
+end
+
+function on_input(self, action_id, action)
+    if action_id == hash("touch") or action_id == nil then
+        local x, y = screen_to_world(action.screen_x, action.screen_y, 0)
+        action.x = x
+        action.y = y
+        msg.post("/cursor#cursor", "input", { action_id = action_id, action = action })
     end
 end
