@@ -408,79 +408,65 @@ embedded_instances {
   }
 }
 embedded_instances {
-  id: "sprite1_moving"
-  data: "components {\n"
-  "  id: \"move\"\n"
-  "  component: \"/demo/move.script\"\n"
-  "}\n"
-  "embedded_components {\n"
+  id: "sprite1_spineboy"
+  data: "embedded_components {\n"
   "  id: \"sprite_mipmap_off\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"default_animation: \\\"demo_image\\\"\\n"
-  "material: \\\"/demo/materials/builtin_sprite_mipmap_off.material\\\"\\n"
-  "textures {\\n"
-  "  sampler: \\\"texture_sampler\\\"\\n"
-  "  texture: \\\"/demo/assets/demo.atlas\\\"\\n"
-  "}\\n"
-  "\"\n"
-  "}\n"
-  "embedded_components {\n"
-  "  id: \"sprite_rgss\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"default_animation: \\\"demo_image\\\"\\n"
-  "material: \\\"/sharp_sprite/rgss/materials/sprite.material\\\"\\n"
-  "textures {\\n"
-  "  sampler: \\\"texture_sampler\\\"\\n"
-  "  texture: \\\"/demo/assets/demo.atlas\\\"\\n"
-  "}\\n"
+  "  type: \"spinemodel\"\n"
+  "  data: \"spine_scene: \\\"/demo/assets/spineboy/spineboy.spinescene\\\"\\n"
+  "default_animation: \\\"walk\\\"\\n"
+  "skin: \\\"\\\"\\n"
+  "material: \\\"/demo/materials/builtin_spine_mipmap_off.material\\\"\\n"
   "\"\n"
   "}\n"
   "embedded_components {\n"
   "  id: \"sprite_mipmap_on\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"default_animation: \\\"demo_image\\\"\\n"
-  "material: \\\"/demo/materials/builtin_sprite_mipmap_on.material\\\"\\n"
-  "textures {\\n"
-  "  sampler: \\\"texture_sampler\\\"\\n"
-  "  texture: \\\"/demo/assets/demo.atlas\\\"\\n"
-  "}\\n"
-  "\"\n"
-  "}\n"
-  "embedded_components {\n"
-  "  id: \"sprite_rgss_bias\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"default_animation: \\\"demo_image\\\"\\n"
-  "material: \\\"/sharp_sprite/rgss_bias/materials/sprite.material\\\"\\n"
-  "textures {\\n"
-  "  sampler: \\\"texture_sampler\\\"\\n"
-  "  texture: \\\"/demo/assets/demo.atlas\\\"\\n"
-  "}\\n"
+  "  type: \"spinemodel\"\n"
+  "  data: \"spine_scene: \\\"/demo/assets/spineboy/spineboy.spinescene\\\"\\n"
+  "default_animation: \\\"walk\\\"\\n"
+  "skin: \\\"\\\"\\n"
+  "material: \\\"/demo/materials/builtin_spine_mipmap_on.material\\\"\\n"
   "\"\n"
   "}\n"
   "embedded_components {\n"
   "  id: \"sprite_mipmap_bias\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"default_animation: \\\"demo_image\\\"\\n"
-  "material: \\\"/sharp_sprite/mipmap_bias/materials/sprite.material\\\"\\n"
-  "textures {\\n"
-  "  sampler: \\\"texture_sampler\\\"\\n"
-  "  texture: \\\"/demo/assets/demo.atlas\\\"\\n"
-  "}\\n"
+  "  type: \"spinemodel\"\n"
+  "  data: \"spine_scene: \\\"/demo/assets/spineboy/spineboy.spinescene\\\"\\n"
+  "default_animation: \\\"walk\\\"\\n"
+  "skin: \\\"\\\"\\n"
+  "material: \\\"/sharp_sprite/mipmap_bias/materials/spine.material\\\"\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite_rgss\"\n"
+  "  type: \"spinemodel\"\n"
+  "  data: \"spine_scene: \\\"/demo/assets/spineboy/spineboy.spinescene\\\"\\n"
+  "default_animation: \\\"walk\\\"\\n"
+  "skin: \\\"\\\"\\n"
+  "material: \\\"/sharp_sprite/rgss/materials/spine.material\\\"\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite_rgss_bias\"\n"
+  "  type: \"spinemodel\"\n"
+  "  data: \"spine_scene: \\\"/demo/assets/spineboy/spineboy.spinescene\\\"\\n"
+  "default_animation: \\\"walk\\\"\\n"
+  "skin: \\\"\\\"\\n"
+  "material: \\\"/sharp_sprite/rgss_bias/materials/spine.material\\\"\\n"
   "\"\n"
   "}\n"
   ""
   position {
     x: 341.0
-    y: 348.0
+    y: 153.0
   }
   rotation {
     z: 0.043619387
     w: 0.99904823
   }
   scale3 {
-    x: 0.25
-    y: 0.25
-    z: 0.25
+    x: 0.6
+    y: 0.6
+    z: 0.6
   }
 }
 embedded_instances {

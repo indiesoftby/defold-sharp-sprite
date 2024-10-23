@@ -18,6 +18,7 @@ version = demo
 publisher = Indiesoft LLC
 dependencies#0 = https://github.com/subsoap/defos/archive/v2.8.0.zip
 dependencies#1 = https://github.com/britzl/defold-input/archive/refs/tags/4.6.2.zip
+dependencies#2 = https://github.com/defold/extension-spine/archive/refs/tags/3.5.3.zip
 
 [library]
 include_dirs = sharp_sprite
