@@ -21,15 +21,20 @@ Sharp Sprite contains a collection of materials that are a drop-in replacement f
 - **RGSS**: slow, and requires OES_standard_derivatives (see below), and doesn't require mipmaps.
 - **RGSS Mipmap Bias -1.0**: faster than RGSS, but requires mipmaps. Not suitable, if you use Slice-9 (will blur around the edges).
 
+### Mipmap Bias -1.0
+
 | Type | Defold Material | Sharp Sprite Material |
 | ---- | --------------- | --------------------- |
-| **Mipmap Bias -1.0** | | |
 | GUI  | `/builtins/materials/gui.material` | `/sharp_sprite/mipmap_bias/materials/gui.material` |
 | ParticleFX  | `/builtins/materials/particlefx.material` | `/sharp_sprite/mipmap_bias/materials/particlefx.material` |
 | Spine  | `/defold-spine/assets/spine.material` | `/sharp_sprite/mipmap_bias/materials/spine.material` |
 | Sprite  | `/builtins/materials/sprite.material` | `/sharp_sprite/mipmap_bias/materials/sprite.material` |
 | Tilemap  | `/builtins/materials/tile_map.material` | `/sharp_sprite/mipmap_bias/materials/tile_map.material` |
-| **RGSS** | | |
+
+### RGSS
+
+| Type | Defold Material | Sharp Sprite Material |
+| ---- | --------------- | --------------------- |
 | GUI  | `/builtins/materials/gui.material` | `/sharp_sprite/rgss/materials/gui.material` |
 | ParticleFX  | `/builtins/materials/particlefx.material` | `/sharp_sprite/rgss/materials/particlefx.material` |
 | Spine  | `/defold-spine/assets/spine.material` | `/sharp_sprite/rgss/materials/spine.material` |
@@ -39,7 +44,11 @@ Sharp Sprite contains a collection of materials that are a drop-in replacement f
 | Font (BMFont)  | `/builtins/fonts/font-fnt.material` | `/sharp_sprite/rgss/fonts/font-fnt.material` |
 | Label (Bitmap)  | `/builtins/fonts/label.material` | `/sharp_sprite/rgss/fonts/label.material` or `/sharp_sprite/rgss/fonts/label-singlelayer.material` |
 | Label (BMFont)  | `/builtins/fonts/label-fnt.material` | `/sharp_sprite/rgss/fonts/label-fnt.material` |
-| **RGSS Mipmap Bias -1.0** | | |
+
+### RGSS Mipmap Bias -1.0
+
+| Type | Defold Material | Sharp Sprite Material |
+| ---- | --------------- | --------------------- |
 | GUI  | `/builtins/materials/gui.material` | `/sharp_sprite/rgss_bias/materials/gui.material` |
 | ParticleFX  | `/builtins/materials/particlefx.material` | `/sharp_sprite/rgss_bias/materials/particlefx.material` |
 | Spine  | `/defold-spine/assets/spine.material` | `/sharp_sprite/rgss_bias/materials/spine.material` |
@@ -48,11 +57,12 @@ Sharp Sprite contains a collection of materials that are a drop-in replacement f
 
 ## Notes
 
-- If you use Slice-9 in GUI or for sprites, **use RGSS material in that case**, i.e. without mipmaps.
+- If you use Slice-9 in GUI or for sprites, **use `RGSS` material in that case**, i.e. without mipmaps.
 - RGSS requires the [OES_standard_derivatives](https://www.khronos.org/registry/OpenGL/extensions/OES/OES_standard_derivatives.txt) OpenGL extension to run. It's universally supported by OpenGL, OpenGL ES 3.0, WebGL 2.0, by the most of OpenGL ES 2.0 and WebGL 1.0 devices ([Android stats](https://opengles.gpuinfo.org/listreports.php?extension=GL_OES_standard_derivatives) and by all [iOS devices](https://developer.apple.com/library/archive/documentation/OpenGLES/Conceptual/OpenGLESHardwarePlatformGuide_iOS/OpenGLESPlatforms/OpenGLESPlatforms.html)). But the shaders will work, even if derivatives are missing.
 - RGSS is sampling the texture 4 times. On mobile GPUs, it can have a significant performance impact. You should always check the game performance on your target devices!
 - RGSS is blurring at 1:1 scaling.
-- RGSS doesn't use mipmapped textures. You can turn off the mipmapping in your texture profile and save 30% of disk space. 
+- RGSS doesn't use mipmapped textures. You can turn off the mipmapping in your texture profile and save 30% of disk space.
+- RGSS can be used with mipmap bias -1.0 to get the best quality.
 - If your sprites use both Defold standard and Sharp Sprite materials, then it's a good idea to split them by tags to avoid breaking of draw batching:
    1. Copy Sharp Sprite material to your project and [apply tag `tile_rgss` into it.](tile_rgss_1.png)
    2. [Modify your render script to draw the tagged sprites.](tile_rgss_2.png)
