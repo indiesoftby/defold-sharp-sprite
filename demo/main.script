@@ -2,7 +2,7 @@ local app_window = require("demo.app.window")
 
 local sprites_objs = { 
     "/sprite1",
-    "/sprite1_moving",
+    "/sprite1_spineboy",
     "/sprite1_straight",
     "/sprite1_rotation"
 }
@@ -38,13 +38,15 @@ end
 
 local function disable_sprite(self, i)
     for _, obj in pairs(sprites_objs) do
-        msg.post(msg.url(nil, obj, sprites_names[i]), "disable")
+        -- msg.post(msg.url(nil, obj, sprites_names[i]), "disable")
+        go.set(msg.url(nil, obj, sprites_names[i]), "tint.w", 0)
     end
 end
 
 local function enable_sprite(self, i)
     for _, obj in pairs(sprites_objs) do
-        msg.post(msg.url(nil, obj, sprites_names[i]), "enable")
+        -- msg.post(msg.url(nil, obj, sprites_names[i]), "enable")
+        go.set(msg.url(nil, obj, sprites_names[i]), "tint.w", 1)
     end
 end
 

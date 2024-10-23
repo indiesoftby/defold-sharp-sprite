@@ -12,3 +12,4 @@ builtins
 /editor-script-lua-format
 /build_demo.sh
 /.editor_settings
+/manifest.*
