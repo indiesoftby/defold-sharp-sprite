@@ -2,6 +2,7 @@
 title = sharp_sprite
 version = demo
 write_log = 0
+minimum_log_level = 1
 compress_archive = 1
 publisher = Indiesoft LLC
 developer = unnamed
@@ -10,7 +11,7 @@ title_as_file_name = sharp_sprite
 [display]
 width = 1500
 height = 2000
-high_dpi = 1
+high_dpi = 0
 samples = 0
 fullscreen = 0
 update_frequency = 0
@@ -61,6 +62,8 @@ max_font_batches = 128
 max_debug_vertices = 10000
 texture_profiles = /demo/mipmaps.texture_profiles
 verify_graphics_calls = 1
+opengl_version_hint = 33
+opengl_core_profile_hint = 1
 memory_size = 512
 
 [shader]
@@ -73,7 +76,12 @@ max_sound_buffers = 32
 max_sound_sources = 16
 max_sound_instances = 256
 max_component_count = 32
+sample_frame_count = 0
 use_thread = 1
+stream_enabled = 0
+stream_chunk_size = 16384
+stream_preload_size = 16384
+stream_cache_size = 2097152
 
 [resource]
 http_cache = 0
@@ -129,7 +137,7 @@ localizations = en
 [android]
 version_code = 1
 minimum_sdk_version = 19
-target_sdk_version = 34
+target_sdk_version = 35
 package = com.example.todo
 gcm_sender_id = 
 manifest = /builtins/manifests/android/AndroidManifest.xml
@@ -167,6 +175,7 @@ show_fullscreen_button = 1
 show_made_with_defold = 1
 show_console_banner = 1
 scale_mode = stretch
+transparent_graphics_context = 0
 
 [particle_fx]
 max_count = 64
