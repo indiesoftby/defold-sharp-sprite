@@ -1,17 +1,10 @@
-name: "particlefx"
+name: "particle"
 tags: "particle"
 vertex_program: "/builtins/materials/particlefx.vp"
 fragment_program: "/sharp_sprite/rgss_bias/materials/particlefx.fp"
-vertex_space: VERTEX_SPACE_WORLD
 vertex_constants {
   name: "view_proj"
   type: CONSTANT_TYPE_VIEWPROJ
-  value {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 0.0
-  }
 }
 fragment_constants {
   name: "tint"

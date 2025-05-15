@@ -1,6 +1,6 @@
 #version 140
 
-in mediump vec2 var_texcoord0;
+in highp vec2 var_texcoord0;
 in mediump vec4 var_color;
 
 out vec4 out_fragColor;

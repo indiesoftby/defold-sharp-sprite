@@ -2,7 +2,7 @@
 
 #include "/sharp_sprite/rgss/rgss.glsl"
 
-in mediump vec2 var_texcoord0;
+in highp vec2 var_texcoord0;
 in mediump vec4 var_face_color;
 in mediump vec4 var_outline_color;
 
