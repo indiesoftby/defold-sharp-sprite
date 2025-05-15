@@ -1,5 +1,3 @@
-local app_window = require("demo.app.window")
-
 local sprites_objs = { 
     "/sprite1",
     "/sprite1_spineboy",
@@ -94,7 +92,8 @@ end
 -- display width and height of game.project is always visible
 local function use_fixed_fit_projection()
     local w, h = window.get_size()
-    local zoom = math.min(w / DISPLAY_WIDTH, h / DISPLAY_HEIGHT)
+    local scale = window.get_display_scale()
+    local zoom = math.min(w / scale / DISPLAY_WIDTH, h / scale / DISPLAY_HEIGHT)
     go.set("#camera", "orthographic_zoom", zoom)
 end
 
@@ -102,11 +101,6 @@ function init(self)
     msg.post("#camera", "acquire_camera_focus")
     msg.post("@render:", "use_camera_projection")
     msg.post(".", "acquire_input_focus")
-
-    timer.delay(0.1, false, function()
-        app_window.resize()
-        app_window.center()
-    end)
 
     self.g = { {}, {} }
 
