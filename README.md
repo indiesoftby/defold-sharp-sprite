@@ -21,6 +21,9 @@ Sharp Sprite contains a collection of materials that are a drop-in replacement f
 - **RGSS**: slow, and requires OES_standard_derivatives (see below), and doesn't require mipmaps.
 - **RGSS Mipmap Bias -1.0**: faster than RGSS, but requires mipmaps. Not suitable, if you use Slice-9 (will blur around the edges).
 
+> [!IMPORTANT]
+> Materials "Mipmap Bias -1.0" and "RGSS Mipmap Bias -1.0" require mipmaps in your game textures. To use them, you need to create your own texture profile with mipmap generation enabled and set it in your `game.project` file. You can find an example texture profile with mipmaps in the `demo` folder of this project.
+
 ### Mipmap Bias -1.0
 
 | Type | Defold Material | Sharp Sprite Material |
