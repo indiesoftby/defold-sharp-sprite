@@ -71,6 +71,7 @@ output_spirv = 0
 
 [sound]
 gain = 1
+use_linear_gain = 1
 max_sound_data = 128
 max_sound_buffers = 32
 max_sound_sources = 16
@@ -200,6 +201,7 @@ subpixels = 1
 
 [profiler]
 track_cpu = 0
+enabled = true
 sleep_between_server_updates = 0
 
 [liveupdate]
